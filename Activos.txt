@@ -1,0 +1,44 @@
+Servicio de transporte
+Atención al cliente
+Servidor
+Data center
+Conductor
+Clientes
+SF App Conductor
+SF App Cliente
+SF Servidor
+Coche
+GPS Coche
+Conexión internet	
+Sistemas de replicación
+Servidor secundario
+Firewall 
+Servidor de base de datos
+Base de datos
+Empleados compañía
+Pasarela y datos de pago
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
