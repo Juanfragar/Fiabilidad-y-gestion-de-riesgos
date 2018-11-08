@@ -1,0 +1,1001 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Análisis de riesgos</title>
+<style type="text/css">
+body {
+  color: back;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 11pt;
+}
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h7 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h8 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h9 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.subtitle {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-family: serif;
+  font-style: italic;
+  font-weight: bold;
+}
+p.e1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e6 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e7 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e8 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e9 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<p class="title">Análisis de riesgos</p>
+<p class="subtitle">proyecto: [UBER] Practica 1 UBER</p>
+<p >
+<b>fecha:</b> 08-nov-2018</p>
+<p >
+<b>clasificación:</b> CONFIDENCIAL</p>
+<h1>1. Datos del proyecto </h1>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>UBER</td>
+<td>Practica 1 UBER</td>
+</tr>
+<tr valign="center">
+<td>Organización</td>
+<td>UBER</td>
+</tr>
+<tr valign="center">
+<td>Descripción</td>
+<td>Servicio de transportes</td>
+</tr>
+<tr valign="center">
+<td>Autor</td>
+<td>Juan Francisco García Delgado, Juan José Montoya Segura</td>
+</tr>
+<tr valign="center">
+<td>Versión</td>
+<td>1.0</td>
+</tr>
+<tr valign="center">
+<td>biblioteca</td>
+<td>[std] Biblioteca INFOSEC (20.8.2017)</td>
+</tr>
+</table>
+<p class="e3">Licencia</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+[edu] ual.es</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+Fiabilidad y Gestión de Riesgos</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+Grado de Ingeniería Informática</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+Universidad de Almería</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+[ ... 1.3.2019]</p>
+<h1>2. Dimensiones </h1>
+<ul>
+<li>[D] disponibilidad</li>
+<li>[I] integridad de los datos</li>
+<li>[C] confidencialidad de los datos</li>
+<li>[A] autenticidad de los usuarios y de la información</li>
+<li>[T] trazabilidad del servicio y de los datos</li>
+<li>[V] Valor (ej. vidas humanas, patromonio corporativo, etc.)</li>
+<li>[DP] Datos personales</li>
+</ul>
+<h1>3. Dominios de seguridad </h1>
+<ul>
+<li>[base] Base</li>
+<ul>
+</ul>
+</ul>
+<h2>3.1. valoración de los activos </h2>
+<p class="e2">dominio: [base] Base</p>
+<p class="e3">capa: [B] Activos esenciales</p>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>[D]</td>
+<td>[I]</td>
+<td>[C]</td>
+<td>[A]</td>
+<td>[T]</td>
+<td>[V]</td>
+<td>[DP]</td>
+</tr>
+<tr valign="center">
+<td>[BD] Base de datos</td>
+<td>2,1M<sup>(1)</sup></td>
+<td>2,1M<sup>(2)</sup></td>
+<td>2,1M<sup>(3)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[T] Servicio de transporte</td>
+<td>2,1M<sup>(4)</sup></td>
+<td>1M<sup>(5)</sup></td>
+<td>1M<sup>(6)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[AC] Atención al cliente</td>
+<td>215K<sup>(7)</sup></td>
+<td>2,1M<sup>(8)</sup></td>
+<td>2,1M<sup>(9)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+<tr valign="top">
+<th align="right">(1)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} constituye un incumplimiento excepcionalmente grave de las obligaciones contractuales relativas a la seguridad de la información proporcionada por terceros<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas</td>
+</tr>
+<tr valign="top">
+<th align="right">(2)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{4} Puede causar malestar público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(3)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(4)</th>
+<td align="left">{3} probablemente afecte a un individuo<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} constituye un incumplimiento excepcionalmente grave de las obligaciones contractuales relativas a la seguridad de la información proporcionada por terceros<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{3} Causa de protestas puntuales<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{1} pudiera impedir la operación efectiva de una parte de la Organización<br>{7} por afectar gravemente a las relaciones con el público en general<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{1} Sin Clasificar<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(5)</th>
+<td align="left">{4} probablemente afecte a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} constituye un serio incumplimiento de obligaciones contractuales relativas a la seguridad de la información proporcionada por terceros<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{4} Puede causar malestar público<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{2} Probablemente cause una pérdida menor de la confianza dentro de la Organización<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(6)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{9} de enorme interés para la competencia<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(7)</th>
+<td align="left">{2} pudiera causar molestias a un individuo<br>{1} pudiera causar el incumplimiento leve o técnico de una ley o regulación<br>{1} pudiera causar una merma en la seguridad o dificultar la investigación de un incidente<br>{3} causa de pérdidas financieras o merma de ingresos<br>{1} Pudiera causar la interrupción de actividades propias de la Organización<br>{3} Causa de protestas puntuales<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{1} pudiera impedir la operación efectiva de una parte de la Organización<br>{5} por afectar negativamente a las relaciones con el público<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(8)</th>
+<td align="left">{5} probablemente quebrante seriamente leyes o regulaciones<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{7} Nivel 7<br>{1} Pudiera causar la interrupción de actividades propias de la Organización<br>{1} Pudiera causar protestas puntuales<br>{1} Pudiera mermar la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{1} pudiera impedir la operación efectiva de una parte de la Organización<br>{9} Probablemente causaría una publicidad negativa generalizada por afectar de forma excepcionalmente grave a las relaciones ...<br>{9} a las relaciones con el público en general<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(9)</th>
+<td align="left">{0} 0 - Pseudónimos<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{5} Nivel 5<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{5} Puede causar un significativo malestar público<br>{1} Pudiera mermar la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{7} Probablemente causaría una publicidad negativa generalizada<br>{7} por afectar gravemente a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+</table>
+<p class="e3">capa: [E] Equipamiento</p>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>[D]</td>
+<td>[I]</td>
+<td>[C]</td>
+<td>[A]</td>
+<td>[T]</td>
+<td>[V]</td>
+<td>[DP]</td>
+</tr>
+<tr valign="center">
+<td>[APPC] APP Conductor</td>
+<td>1M<sup>(1)</sup></td>
+<td>1M<sup>(2)</sup></td>
+<td>2,1M<sup>(3)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[APPCL] APP Cliente</td>
+<td>2,1M<sup>(4)</sup></td>
+<td>2,1M<sup>(5)</sup></td>
+<td>2,1M<sup>(6)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[SSV] Software servidor</td>
+<td>2,1M<sup>(7)</sup></td>
+<td>2,1M<sup>(8)</sup></td>
+<td>2,1M<sup>(9)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[FW] Firewall</td>
+<td>215K<sup>(10)</sup></td>
+<td>215K<sup>(11)</sup></td>
+<td>1M<sup>(12)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[SBD] Servidor de bases de datos</td>
+<td>2,1M<sup>(13)</sup></td>
+<td>2,1M<sup>(14)</sup></td>
+<td>2,1M<sup>(15)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[SV] Servidor principal</td>
+<td>2,1M<sup>(16)</sup></td>
+<td>2,1M<sup>(17)</sup></td>
+<td>2,1M<sup>(18)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[SV2] Servidor secundario</td>
+<td>2,1M<sup>(19)</sup></td>
+<td>2,1M<sup>(20)</sup></td>
+<td>2,1M<sup>(21)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[C] Coche</td>
+<td>2,1M<sup>(22)</sup></td>
+<td>2,1M<sup>(23)</sup></td>
+<td>2,1M<sup>(24)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[GPS] GPS Coche</td>
+<td>2,1M<sup>(25)</sup></td>
+<td>215K<sup>(26)</sup></td>
+<td>1M<sup>(27)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[BAK] Sistemas de replicación</td>
+<td>2,1M<sup>(28)</sup></td>
+<td>2,1M<sup>(29)</sup></td>
+<td>1M<sup>(30)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[INT] Conexión a internet</td>
+<td>1M<sup>(31)</sup></td>
+<td>2,1M<sup>(32)</sup></td>
+<td>1M<sup>(33)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+<tr valign="top">
+<th align="right">(1)</th>
+<td align="left">{1} B - Datos normales<br>Obligaciones legales:<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{3} probablemente sea causa de una merma en la seguridad o dificulte la investigación de un incidente<br>{3} causa de pérdidas financieras o merma de ingresos<br>{5} Probablemente cause la interrupción de actividades propias de la Organización con impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{1} Pudiera mermar la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{7} por afectar gravemente a las relaciones con el público en general<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{4} 4 horas &lt; RTO &lt; 1 día<br>Información Clasificada:<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(2)</th>
+<td align="left">{5} M+ - Datos especiales - gran volumen (&gt; 1M personas)<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} de alto interés para la competencia<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{7} Probablemente causaría una publicidad negativa generalizada<br>{7} por afectar gravemente a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{8} Confidencial<br>Seguridad de las personas<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(3)</th>
+<td align="left">{1} B - Datos normales<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{1} pudiera causar una merma en la seguridad o dificultar la investigación de un incidente<br>{7} de alto interés para la competencia<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{5} Puede causar un significativo malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} por afectar negativamente a las relaciones con el público<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(4)</th>
+<td align="left">{1} B - Datos normales<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{7} de alto interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{4} Puede causar malestar público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{7} por afectar gravemente a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(5)</th>
+<td align="left">{1} B - Datos normales<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{7} de alto interés para la competencia<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>Información Clasificada:<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(6)</th>
+<td align="left">{1} B - Datos normales<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{7} Nivel 7<br>{7} de alto interés para la competencia<br>{5} Probablemente cause la interrupción de actividades propias de la Organización con impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{7} por afectar gravemente a las relaciones con el público en general<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(7)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} Probablemente causaría una publicidad negativa generalizada por afectar de forma excepcionalmente grave a las relaciones ...<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>Nacional<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(8)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>Nacional<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(9)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>Nacional<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(10)</th>
+<td align="left">{1} B - Datos normales<br>{1} pudiera causar el incumplimiento leve o técnico de una ley o regulación<br>Seguridad:<br>{3} probablemente sea causa de una merma en la seguridad o dificulte la investigación de un incidente<br>Intereses Comerciales / Económicos:<br>{2} de bajo interés para la competencia<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{1} Pudiera causar protestas puntuales<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{1} pudiera impedir la operación efectiva de una parte de la Organización<br>{2} Probablemente cause una pérdida menor de la confianza dentro de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>Nacional<br>{2} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(11)</th>
+<td align="left">{1} B - Datos normales<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{2} de bajo interés para la competencia<br>{5} Probablemente cause la interrupción de actividades propias de la Organización con impacto en otras organizaciones<br>{4} Puede causar malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{5} Probablemente sea causa una cierta publicidad negativa<br>{5} por afectar negativamente a las relaciones con el público<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{2} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(12)</th>
+<td align="left">{5} probablemente afecte gravemente a un individuo<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} Nivel 7<br>{7} de elevado valor comercial<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{4} Puede causar malestar público<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{2} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(13)</th>
+<td align="left">Información Personal:<br>{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>Seguridad:<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>Interrupción del servicio:<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(14)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>Nacional<br>{10} Secreto<br>Seguridad de las personas<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(15)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} Probablemente causaría una publicidad negativa generalizada por afectar de forma excepcionalmente grave a las relaciones ...<br>{9} a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>Nacional<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(16)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>Operaciones:<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>Administración y Gestión:<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{7} Probablemente causaría una publicidad negativa generalizada<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>Persecución de Delitos:<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>Nacional<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(17)</th>
+<td align="left">Información Personal:<br>{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} Probablemente causaría una publicidad negativa generalizada por afectar de forma excepcionalmente grave a las relaciones ...<br>{9} a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(18)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>Nacional<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(19)</th>
+<td align="left">{4} probablemente afecte a un grupo de individuos<br>Obligaciones legales:<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{5} Nivel 5<br>{5} de valor comercial significativo<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{5} Probablemente sea causa una cierta publicidad negativa<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>Nacional<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(20)</th>
+<td align="left">{3} probablemente suponga el incumplimiento de una ley o regulación<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{5} de interés significativo para la competencia<br>{5} Probablemente cause la interrupción de actividades propias de la Organización con impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>Persecución de Delitos:<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(21)</th>
+<td align="left">{5} probablemente quebrante seriamente leyes o regulaciones<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{5} Nivel 5<br>{5} causa de pérdidas económicas o merma significativa de ingresos<br>Interrupción del servicio:<br>{5} Puede causar un significativo malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>Persecución de Delitos:<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{6} podría lesionar gravemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(22)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{5} Nivel 5<br>{5} de valor comercial significativo<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>Pérdida de Confianza (Reputación):<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>{1} Sin Clasificar<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(23)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de muy elevado valor comercial<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(24)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{7} de elevado valor comercial<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{7} probablemente impediría la operación efectiva de la Organización<br>Pérdida de Confianza (Reputación):<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>{2} Sin Clasificar<br>{6} podría lesionar gravemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(25)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{3} de cierto valor comercial<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{4} Puede causar malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{1} Sin Clasificar<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(26)</th>
+<td align="left">{5} probablemente afecte gravemente a un individuo<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{3} causa de pérdidas financieras o merma de ingresos<br>{5} Probablemente cause un cierto impacto en otras organizaciones<br>{4} Puede causar malestar público<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{2} Sin Clasificar<br>{3} podría lesionar a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(27)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{3} de cierto valor comercial<br>{5} Probablemente cause la interrupción de actividades propias de la Organización con impacto en otras organizaciones<br>{4} Puede causar malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{4} 4 horas &lt; RTO &lt; 1 día<br>Nacional<br>{1} Sin Clasificar<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(28)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{9} de muy elevado valor comercial<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{10} Secreto<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(29)</th>
+<td align="left">{5} probablemente afecte gravemente a un individuo<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} de alto interés para la competencia<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{10} Secreto<br>{8} podría amenazas seriamente la integridad física de uno o más individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(30)</th>
+<td align="left">Información Personal:<br>{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} Nivel 7<br>{7} de alto interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>Orden Público:<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>Nacional<br>{8} podría amenazas seriamente la integridad física de uno o más individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(31)</th>
+<td align="left">{3} probablemente afecte a un individuo<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{5} de interés significativo para la competencia<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{9} Alteración seria del orden público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} Probablemente sea causa una cierta publicidad negativa<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{7} RTO &lt; 4 horas<br>{9} Reservado<br>{8} podría amenazas seriamente la integridad física de uno o más individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(32)</th>
+<td align="left">{4} probablemente quebrante leyes o regulaciones<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{5} causa de pérdidas económicas o merma significativa de ingresos<br>{7} Probablemente tenga un gran impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{9} Reservado<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(33)</th>
+<td align="left">{5} probablemente afecte gravemente a un individuo<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{5} Nivel 5<br>{5} de interés significativo para la competencia<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} Probablemente sea causa una cierta publicidad negativa<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{7} RTO &lt; 4 horas<br>{9} Reservado<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+</table>
+<p class="e3">capa: [SS] Servicios subcontratados</p>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>[D]</td>
+<td>[I]</td>
+<td>[C]</td>
+<td>[A]</td>
+<td>[T]</td>
+<td>[V]</td>
+<td>[DP]</td>
+</tr>
+<tr valign="center">
+<td>[PAS] Pasarela de pago</td>
+<td>215K<sup>(1)</sup></td>
+<td>2,1M<sup>(2)</sup></td>
+<td>2,1M<sup>(3)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+<tr valign="top">
+<th align="right">(1)</th>
+<td align="left">{2} pudiera quebrantar de forma leve leyes o regulaciones<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{2} de bajo interés para la competencia<br>Interrupción del servicio:<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{3} Causa de protestas puntuales<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{4} 4 horas &lt; RTO &lt; 1 día<br>Información Clasificada:<br>{1} Sin Clasificar<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(2)</th>
+<td align="left">{1} B - Datos normales<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{3} probablemente sea causa de una merma en la seguridad o dificulte la investigación de un incidente<br>{3} Nivel 3<br>{3} de cierto valor comercial<br>{2} Nivel 2<br>{2} de bajo interés para la competencia<br>{3} Probablemente cause la interrupción de actividades propias de la Organización<br>{3} Causa de protestas puntuales<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(3)</th>
+<td align="left">{1} B - Datos normales<br>{3} probablemente sea causa de incumplimiento leve o técnico de una ley o regulación<br>{3} probablemente sea causa de una merma en la seguridad o dificulte la investigación de un incidente<br>{2} de bajo interés para la competencia<br>{5} Probablemente cause un cierto impacto en otras organizaciones<br>{4} Puede causar malestar público<br>{3} Probablemente merme la eficacia o seguridad de la misión operativa o logística (alcance local)<br>{3} probablemente impediría la operación efectiva de una parte de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>Persecución de Delitos:<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{4} 4 horas &lt; RTO &lt; 1 día<br>{10} Secreto<br>{1} podría lesionar levemente a un individuo</td>
+</tr>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+</table>
+<p class="e3">capa: [L] Instalaciones</p>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>[D]</td>
+<td>[I]</td>
+<td>[C]</td>
+<td>[A]</td>
+<td>[T]</td>
+<td>[V]</td>
+<td>[DP]</td>
+</tr>
+<tr valign="center">
+<td>[DC] Data center</td>
+<td>2,1M<sup>(1)</sup></td>
+<td>2,1M<sup>(2)</sup></td>
+<td>2,1M<sup>(3)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+<tr valign="top">
+<th align="right">(1)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{7} de alto interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>Administración y Gestión:<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>{10} Secreto<br>{7} podría lesionar gravemente a varios individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(2)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{7} de elevado valor comercial<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con el público en general<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>Información Clasificada:<br>Nacional<br>{10} Secreto<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(3)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>{10} Secreto<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+</table>
+<p class="e3">capa: [P] Personal</p>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>[D]</td>
+<td>[I]</td>
+<td>[C]</td>
+<td>[A]</td>
+<td>[T]</td>
+<td>[V]</td>
+<td>[DP]</td>
+</tr>
+<tr valign="center">
+<td>[CON] Conductores</td>
+<td>1M<sup>(1)</sup></td>
+<td>2,1M<sup>(2)</sup></td>
+<td>1M<sup>(3)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[EMP] Empleados compañía</td>
+<td>1M<sup>(4)</sup></td>
+<td>2,1M<sup>(5)</sup></td>
+<td>1M<sup>(6)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="center">
+<td>[CLI] Clientes</td>
+<td>2,1M<sup>(7)</sup></td>
+<td>2,1M<sup>(8)</sup></td>
+<td>2,1M<sup>(9)</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+<tr valign="top">
+<th align="right">(1)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{3} de cierto valor comercial<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{3} Probablemente afecte negativamente a las relaciones internas de la Organización<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{1} 1 día &lt; RTO &lt; 5 días<br>{2} Sin Clasificar<br>{7} podría lesionar gravemente a varios individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(2)</th>
+<td align="left">{5} probablemente afecte gravemente a un individuo<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{3} probablemente sea causa de una merma en la seguridad o dificulte la investigación de un incidente<br>{3} de cierto interés para la competencia<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{4} Puede causar malestar público<br>{5} Probablemente merme la eficacia o seguridad de la misión operativa o logística más allá del ámbito local<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{1} 1 día &lt; RTO &lt; 5 días<br>{10} Secreto<br>{8} podría amenazas seriamente la integridad física de uno o más individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(3)</th>
+<td align="left">{5} probablemente quebrante seriamente leyes o regulaciones<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{7} probablemente sea causa de un grave incidente de seguridad o dificulte la investigación de incidentes graves<br>{5} de valor comercial significativo<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} Probablemente sea causa una cierta publicidad negativa<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{1} 1 día &lt; RTO &lt; 5 días<br>{2} Sin Clasificar<br>{8} podría amenazas seriamente la integridad física de uno o más individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(4)</th>
+<td align="left">{4} probablemente afecte a un grupo de individuos<br>{5} probablemente sea causa de incumplimiento de una ley o regulación<br>Seguridad:<br>{3} probablemente sea causa de una merma en la seguridad o dificulte la investigación de un incidente<br>{5} de interés significativo para la competencia<br>{5} Probablemente cause la interrupción de actividades propias de la Organización con impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{9} Probablemente cause un daño serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{1} 1 día &lt; RTO &lt; 5 días<br>{1} Sin Clasificar<br>{6} podría lesionar gravemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(5)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{7} Nivel 7<br>{7} de alto interés para la competencia<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{5} probablemente impediría la operación efectiva de más de una parte de la Organización<br>{7} Probablemente causaría una publicidad negativa generalizada<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{1} 1 día &lt; RTO &lt; 5 días<br>Información Clasificada:<br>{1} Sin Clasificar<br>{7} podría lesionar gravemente a varios individuos</td>
+</tr>
+<tr valign="top">
+<th align="right">(6)</th>
+<td align="left">{5} probablemente afecte gravemente a un individuo<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} causa de graves pérdidas económicas<br>{7} Probablemente cause una interrupción seria de las actividades propias de la Organización con un impacto significativo en otras organizaciones<br>{5} Puede causar un significativo malestar público<br>{7} Probablemente perjudique la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{5} por afectar negativamente a las relaciones con otras organizaciones<br>{4} Dificulte la investigación o facilite la comisión de delitos<br>{1} 1 día &lt; RTO &lt; 5 días<br>{2} Sin Clasificar<br>{6} podría lesionar gravemente a un individuo</td>
+</tr>
+<tr valign="top">
+<th align="right">(7)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{9} probablemente cause un incumplimiento excepcionalmente grave de una ley o regulación<br>{10} probablemente sea causa de un incidente excepcionalmente serio de seguridad o dificulte la investigación de incidentes excepcionalmente serios<br>{9} Nivel 9<br>{9} de enorme interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{6} Probablemente cause manifestaciones, o presiones significativas<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{9} probablemente impediría seriamente la operación efectiva de la Organización, pudiendo llegar a su cierre<br>{9} a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{0} 5 días &lt; RTO<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(8)</th>
+<td align="left">{6} probablemente afecte gravemente a un grupo de individuos<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} de alto interés para la competencia<br>{9} Probablemente tenga un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{1} 1 día &lt; RTO &lt; 5 días<br>{10} Secreto<br>{9} podría causar la pérdida de una o más vidas humanas</td>
+</tr>
+<tr valign="top">
+<th align="right">(9)</th>
+<td align="left">{6} probablemente quebrante seriamente la ley o algún reglamento de protección de información personal<br>{7} probablemente cause un incumplimiento grave de una ley o regulación<br>{9} probablemente sea causa de un serio incidente de seguridad o dificulte la investigación de incidentes serios<br>{7} de alto interés para la competencia<br>{9} Probablemente cause una interrupción excepcionalmente seria de las actividades propias de la Organización con un serio impacto en otras organizaciones<br>{9} Alteración seria del orden público<br>{10} Probablemente cause un daño excepcionalmente serio a la eficacia o seguridad de la misión operativa o logística<br>{7} probablemente impediría la operación efectiva de la Organización<br>{7} por afectar gravemente a las relaciones con otras organizaciones<br>{8} Impida la investigación de delitos graves o facilite su comisión<br>{1} 1 día &lt; RTO &lt; 5 días<br>Nacional<br>{10} Secreto<br>{10} podría causar la pérdida de muchas vidas humanas</td>
+</tr>
+<table cellpadding="3pt" style="margin-left:28pt" border="0">
+</table>
+<h2>3.2. valoración de los dominios </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>dominio de seguridad</td>
+<td>[D]</td>
+<td>[I]</td>
+<td>[C]</td>
+<td>[A]</td>
+<td>[T]</td>
+<td>[V]</td>
+<td>[DP]</td>
+</tr>
+<tr valign="center">
+<td>[base] Base</td>
+<td>18M</td>
+<td>18M</td>
+<td>16M</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</table>
+<h1>4. Riesgo acumulado </h1>
+<h2>4.1. Fase: [potencial]  </h2>
+<h3>4.1.1. Dominio: [base] Base </h3>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>amenaza</td>
+<td>dimensión</td>
+<td>impacto</td>
+<td>probabilidad</td>
+<td>riesgo</td>
+</tr>
+<tr valign="center">
+<td>[A.11] Acceso no autorizado</td>
+<td>D, I, C</td>
+<td>8,9M</td>
+<td>100</td>
+<td>895M</td>
+</tr>
+<tr valign="center">
+<td>[A.24] Denegación de servicio</td>
+<td>D</td>
+<td>18M</td>
+<td>10</td>
+<td>183M</td>
+</tr>
+</table>
+<h2>4.2. Fase: [current] situación actual </h2>
+<h3>4.2.1. Dominio: [base] Base </h3>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>amenaza</td>
+<td>dimensión</td>
+<td>impacto</td>
+<td>probabilidad</td>
+<td>riesgo</td>
+</tr>
+<tr valign="center">
+<td>[A.11] Acceso no autorizado</td>
+<td>D, I, C</td>
+<td>8,9M</td>
+<td>100</td>
+<td>895M</td>
+</tr>
+<tr valign="center">
+<td>[A.24] Denegación de servicio</td>
+<td>D</td>
+<td>18M</td>
+<td>10</td>
+<td>183M</td>
+</tr>
+</table>
+<h2>4.3. Fase: [target] situación objetivo </h2>
+<h3>4.3.1. Dominio: [base] Base </h3>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>amenaza</td>
+<td>dimensión</td>
+<td>impacto</td>
+<td>probabilidad</td>
+<td>riesgo</td>
+</tr>
+<tr valign="center">
+<td>[A.11] Acceso no autorizado</td>
+<td>D, I, C</td>
+<td>8,9M</td>
+<td>100</td>
+<td>895M</td>
+</tr>
+<tr valign="center">
+<td>[A.24] Denegación de servicio</td>
+<td>D</td>
+<td>18M</td>
+<td>10</td>
+<td>183M</td>
+</tr>
+</table>
+<h1>5. Riesgo repercutido </h1>
+<h2>5.1. Fase: [potencial]  </h2>
+<h3>5.1.1. Dominio: [base] Base </h3>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>amenaza</td>
+<td>dimensión</td>
+<td>impacto</td>
+<td>probabilidad</td>
+<td>riesgo</td>
+</tr>
+<tr valign="center">
+<td>[BD] Base de datos</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>2,1M</td>
+<td>100</td>
+<td>215M</td>
+</tr>
+<tr valign="center">
+<td>[HW.SBD] Servidor de bases de datos</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>5,4M</td>
+<td>100</td>
+<td>538M</td>
+</tr>
+<tr valign="center">
+<td>[HW.SV] Servidor principal</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>5,4M</td>
+<td>100</td>
+<td>538M</td>
+</tr>
+<tr valign="center">
+<td>[HW.C] Coche</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>2,1M</td>
+<td>100</td>
+<td>215M</td>
+</tr>
+</table>
+<h2>5.2. Fase: [current] situación actual </h2>
+<h3>5.2.1. Dominio: [base] Base </h3>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>amenaza</td>
+<td>dimensión</td>
+<td>impacto</td>
+<td>probabilidad</td>
+<td>riesgo</td>
+</tr>
+<tr valign="center">
+<td>[BD] Base de datos</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>2,1M</td>
+<td>100</td>
+<td>215M</td>
+</tr>
+<tr valign="center">
+<td>[HW.SBD] Servidor de bases de datos</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>5,4M</td>
+<td>100</td>
+<td>538M</td>
+</tr>
+<tr valign="center">
+<td>[HW.SV] Servidor principal</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>5,4M</td>
+<td>100</td>
+<td>538M</td>
+</tr>
+<tr valign="center">
+<td>[HW.C] Coche</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>2,1M</td>
+<td>100</td>
+<td>215M</td>
+</tr>
+</table>
+<h2>5.3. Fase: [target] situación objetivo </h2>
+<h3>5.3.1. Dominio: [base] Base </h3>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>activo</td>
+<td>amenaza</td>
+<td>dimensión</td>
+<td>impacto</td>
+<td>probabilidad</td>
+<td>riesgo</td>
+</tr>
+<tr valign="center">
+<td>[BD] Base de datos</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>2,1M</td>
+<td>100</td>
+<td>215M</td>
+</tr>
+<tr valign="center">
+<td>[HW.SBD] Servidor de bases de datos</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>5,4M</td>
+<td>100</td>
+<td>538M</td>
+</tr>
+<tr valign="center">
+<td>[HW.SV] Servidor principal</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>5,4M</td>
+<td>100</td>
+<td>538M</td>
+</tr>
+<tr valign="center">
+<td>[HW.C] Coche</td>
+<td>[A.11] Acceso no autorizado</td>
+<td>C</td>
+<td>2,1M</td>
+<td>100</td>
+<td>215M</td>
+</tr>
+</table>
+<h1>6. Activos </h1>
+<h2>6.1. Dominio: [base] Base </h2>
+<p class="e2">Capa: [B] Activos esenciales</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[BD] Base de datos</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[T] Servicio de transporte</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[AC] Atención al cliente</p>
+<p class="e2">Capa: [E] Equipamiento</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[SW] Aplicaciones</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[APPC] APP Conductor</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[APPCL] APP Cliente</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SSV] Software servidor</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[HW] Equipos</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FW] Firewall</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SBD] Servidor de bases de datos</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SV] Servidor principal</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SV2] Servidor secundario</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[C] Coche</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GPS] GPS Coche</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BAK] Sistemas de replicación</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[COM] Comunicaciones</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[INT] Conexión a internet</p>
+<p class="e2">Capa: [SS] Servicios subcontratados</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[PAS] Pasarela de pago</p>
+<p class="e2">Capa: [L] Instalaciones</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[DC] Data center</p>
+<p class="e2">Capa: [P] Personal</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[CON] Conductores</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[EMP] Empleados compañía</p>
+<p style="margin-top:0pt;margin-bottom:0pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;[CLI] Clientes</p>
+</body>
+</html>
