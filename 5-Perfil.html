@@ -1,0 +1,1496 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>[27002:2013] Código de prácticas para los controles de seguridad de la información</title>
+<style type="text/css">
+body {
+  color: back;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 11pt;
+}
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h7 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h8 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+h9 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.subtitle {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-family: serif;
+  font-style: italic;
+  font-weight: bold;
+}
+p.e1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e5 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e6 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e7 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e8 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+p.e9 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<p class="title">[27002:2013] Código de prácticas para los controles de seguridad de la información</p>
+<p class="subtitle">proyecto: [UBER] Practica 1 UBER</p>
+<p >
+<b>fecha:</b> 08-nov-2018</p>
+<p >
+<b>clasificación:</b> CONFIDENCIAL</p>
+<h1>1. Datos del proyecto </h1>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>UBER</td>
+<td>Practica 1 UBER</td>
+</tr>
+<tr valign="center">
+<td>Organización</td>
+<td>UBER</td>
+</tr>
+<tr valign="center">
+<td>Descripción</td>
+<td>Servicio de transportes</td>
+</tr>
+<tr valign="center">
+<td>Autor</td>
+<td>Juan Francisco García Delgado, Juan José Montoya Segura</td>
+</tr>
+<tr valign="center">
+<td>Versión</td>
+<td>1.0</td>
+</tr>
+<tr valign="center">
+<td>biblioteca</td>
+<td>[std] Biblioteca INFOSEC (20.8.2017)</td>
+</tr>
+</table>
+<p class="e3">Licencia</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+[edu] ual.es</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+Fiabilidad y Gestión de Riesgos</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+Grado de Ingeniería Informática</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+Universidad de Almería</p>
+<p style="margin-left:28pt;margin-top:0pt;margin-bottom:0pt;">
+[ ... 1.3.2019]</p>
+<h1>2. Dominios de seguridad </h1>
+<ul>
+<li>[base] Base</li>
+<ul>
+</ul>
+</ul>
+<h1>3. Fases del proyecto </h1>
+<ul>
+<li>[current] situación actual</li>
+<li>[target] situación objetivo</li>
+<li>[PILAR] recomendación</li>
+</ul>
+<h1>4. Dominio de seguridad: [base] Base </h1>
+<h2>4.1. [5] Políticas de seguridad de la información </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[5] Políticas de seguridad de la información</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>[5.1] Directrices de gestión de la seguridad de la información</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[5.1.1] Políticas para la seguridad de la información</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[5.1.2] Revisión de las políticas para la seguridad de la información</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+</table>
+<h2>4.2. [6] Organización de la seguridad de la información </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[6] Organización de la seguridad de la información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>67%</td>
+</tr>
+<tr valign="center">
+<td>[6.1] Organización interna</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>67%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.1.1] Roles y responsabilidades en seguridad de la información</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>55%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.1.2] Separación de tareas</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>66%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.1.3] Contacto con las autoridades</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.1.4] Contacto con grupos de interés especial</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>83%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.1.5] Seguridad de la información en la gestión de proyectos</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>[6.2] Los dispositivos móviles y el teletrabajo</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.2.1] Política de dispositivos móviles</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[6.2.2] Teletrabajo</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.3. [7] Seguridad relativa a los recursos humanos </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[7] Seguridad relativa a los recursos humanos</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>67%</td>
+</tr>
+<tr valign="center">
+<td>[7.1] Antes del empleo</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>59%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[7.1.1] Investigación de antecedentes</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>57%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[7.1.2] Términos y condiciones del empleo</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>61%</td>
+</tr>
+<tr valign="center">
+<td>[7.2] Durante el empleo</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>65%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[7.2.1] Responsabilidades de gestión</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[7.2.2] Concienciación, educación y capacitación en seguridad de la información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>67%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[7.2.3] Proceso disciplinario</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>[7.3] Finalización del empleo o cambio en el puesto de trabajo</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>76%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[7.3.1] Responsabilidades ante la finalización o cambio</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>76%</td>
+</tr>
+</table>
+<h2>4.4. [8] Gestión de activos </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[8] Gestión de activos</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>65%</td>
+</tr>
+<tr valign="center">
+<td>[8.1] Responsabilidad sobre los activos</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>59%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.1.1] Inventario de activos</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>59%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.1.2] Propiedad de los activos</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.1.3] Uso aceptable de los activos</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>33%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.1.4] Devolución de activos</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>87%</td>
+</tr>
+<tr valign="center">
+<td>[8.2] Clasificación de la información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>75%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.2.1] Clasificación de la información</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>78%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.2.2] Etiquetado de la información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>83%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.2.3] Manipulado de la información</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>63%</td>
+</tr>
+<tr valign="center">
+<td>[8.3] Manipulación de los soportes</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.3.1] Gestión de soportes extraíbles</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.3.2] Eliminación de soportes</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>52%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[8.3.3] Soportes físicos en tránsito</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+</table>
+<h2>4.5. [9] Control de acceso </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[9] Control de acceso</td>
+<td>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>66%</td>
+</tr>
+<tr valign="center">
+<td>[9.1] Requisitos de negocio para el control de acceso</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>55%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.1.1] Política de control de acceso</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.1.2] Acceso a las redes y a los servicios de red</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>[9.2] Gestión de acceso de usuario</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>66%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.2.1] Registro y baja de usuario</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.2.2] Provision de acceso de usuario</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.2.3] Gestión de privilegios de acceso</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>53%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.2.4] Gestión de la información secreta de autenticación de los usuarios</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.2.5] Revisión de los derechos de acceso de usuario</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.2.6] Retirada o reasignación de los derechos de acceso</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>73%</td>
+</tr>
+<tr valign="center">
+<td>[9.3] Responsabilidades del usuario</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>90%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.3.1] Uso de la información secreta de autenticación</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>90%</td>
+</tr>
+<tr valign="center">
+<td>[9.4] Control de acceso a sistemas y aplicaciones</td>
+<td>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>79%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.4.1] Restricción del acceso a la información</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.4.2] Procedimientos seguros de inicio de sesión</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>77%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.4.3] Sistema de gestión de contraseñas</td>
+<td>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>90%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.4.4] Uso de utilidades con privilegios del sistema</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>68%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[9.4.5] Control de acceso al código fuente de los programas</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.6. [10] Criptografía </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[10] Criptografía</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>[10.1] Controles criptográficos</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[10.1.1] Política de uso de los controles criptográficos</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[10.1.2] Gestión de claves</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.7. [11] Seguridad física y del entorno </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[11] Seguridad física y del entorno</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>56%</td>
+</tr>
+<tr valign="center">
+<td>[11.1] Áreas seguras</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>45%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.1.1] Perímetro de seguridad física</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.1.2] Controles físicos de entrada</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.1.3] Seguridad de oficinas, despachos y recursos</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>33%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.1.4] Protección contra las amenazas externas y ambientales</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.1.5] El trabajo en áreas seguras</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>22%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.1.6] Áreas de carga y descarga</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>[11.2] Seguridad de los equipos</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>67%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.1] Emplazamiento y protección de equipos</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>53%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.2] Instalaciones de suministro</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>78%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.3] Seguridad del cableado</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>78%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.4] Mantenimiento de los equipos</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.5] Retirada de materiales propiedad de la empresa</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.6] Seguridad de los equipos fuera de las instalaciones</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>68%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.7] Reutilización o eliminación segura de equipos</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.8] Equipo de usuario desatendido</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>87%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[11.2.9] Política de puesto de trabajo despejado y pantalla limpia</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>30%</td>
+</tr>
+</table>
+<h2>4.8. [12] Seguridad de las operaciones </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[12] Seguridad de las operaciones</td>
+<td>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>[12.1] Procedimientos y responsabilidades operacionales</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>61%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.1.1] Documentación de los procedimientos de operación</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>53%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.1.2] Gestión de cambios</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>52%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.1.3] Gestión de capacidades</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>77%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.1.4] Separación de los recursos de desarrollo, prueba y operación</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>[12.2] Protección contra el software malicioso (malware)</td>
+<td>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>82%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.2.1] Controles contra el código malicioso</td>
+<td>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>82%</td>
+</tr>
+<tr valign="center">
+<td>[12.3] Copias de seguridad</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>26%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.3.1] Copias de seguridad de la información</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>26%</td>
+</tr>
+<tr valign="center">
+<td>[12.4] Registros y supervisión</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.4.1] Registro de eventos</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.4.2] Protección de la información de registro</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.4.3] Registros de administración y operación</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.4.4] Sincronización del reloj</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>[12.5] Control del software en explotación</td>
+<td>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>66%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.5.1] Instalación del software en explotación</td>
+<td>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>66%</td>
+</tr>
+<tr valign="center">
+<td>[12.6] Gestión de la vulnerabilidad técnica</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>63%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.6.1] Gestión de las vulnerabilidades técnicas</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>77%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.6.2] Restricción en la instalación de software</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>[12.7] Consideraciones sore la auditoría de sistemas de información</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[12.7.1] Controles de auditoría de sistemas de información</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.9. [13] Seguridad de las comunicaciones </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[13] Seguridad de las comunicaciones</td>
+<td>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>[13.1] Gestión de la seguridad de redes</td>
+<td>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>53%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.1.1] Controles de red</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>47%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.1.2] Seguridad de los servicios de red</td>
+<td>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>58%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.1.3] Segregación en redes</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>[13.2] Intercambio de información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>62%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.2.1] Políticas y procedimientos de intercambio de información</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>32%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.2.2] Acuerdos de intercambio de información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>75%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.2.3] Mensajería electrónica</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[13.2.4] Acuerdos de confidencialidad o no revelación</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+</table>
+<h2>4.10. [14] Adquisición, desarrollo y mantenimiento de los sistemas de información </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[14] Adquisición, desarrollo y mantenimiento de los sistemas de información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>[14.1] Requisitos de seguridad en sistemas de información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>43%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.1.1] Análisis de requisitos y especificaciones de seguridad de la información</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.1.2] Asegurar los servicios de aplicaciones en redes públicas</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>29%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.1.3] Protección de las transacciones de servicios de aplicaciones</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>39%</td>
+</tr>
+<tr valign="center">
+<td>[14.2] Seguridad en el desarrollo y en los procesos de soporte</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>57%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.1] Política de desarrollo seguro</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.2] Procedimiento de control de cambios en sistemas</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>70%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.3] Revisión técnica de las aplicaciones tras efectuar cambios en el sistema operativo</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>74%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.4] Restricciones a los cambios en los paquetes de software</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.5] Principios de ingeniería de sistemas seguros</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>40%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.6] Entorno de desarrollo seguro</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.7] Externalización del desarrollo de software</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>26%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.8] Pruebas funcionales de seguridad de sistemas</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.2.9] Pruebas de aceptación de sistemas</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>[14.3] Datos de prueba</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[14.3.1] Protección de los datos de prueba</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.11. [15] Relación con proveedores </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[15] Relación con proveedores</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>21%</td>
+</tr>
+<tr valign="center">
+<td>[15.1] Seguridad en las relaciones con proveedores</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>11%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[15.1.1] Política de seguridad de la información en las relaciones con los proveedores</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>11%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[15.1.2] Requisitos de seguridad en contratos con terceros</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[15.1.3] Cadena de suministro de tecnología de la información y de las comunicaciones</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>[15.2] Gestión de la provisión de servicios del proveedor</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>30%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[15.2.1] Control y revisión de la provisión de servicios del proveedor</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>30%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[15.2.2] Gestión de cambios en la provisión del servicio del proveedor</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.12. [16] Gestión de incidentes de seguridad de la información </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[16] Gestión de incidentes de seguridad de la información</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>63%</td>
+</tr>
+<tr valign="center">
+<td>[16.1] Gestión de incidentes de seguridad de la información y mejoras</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>63%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.1] Responsabilidades y procedimientos</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.2] Notificación de eventos de seguridad de la información</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.3] Notificación de puntos débiles de la seguridad</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>60%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.4] Evaluación y decisión sobre los eventos de seguridad de información</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>54%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.5] Respuesta a incidentes de seguridad de la información</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>49%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.6] Aprendizaje de los incidentes de seguridad de la información</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>75%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[16.1.7] Recopilación de evidencias</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+</table>
+<h2>4.13. [17] Aspectos de seguridad de la información para la gestión de la continuidad del negocio </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[17] Aspectos de seguridad de la información para la gestión de la continuidad del negocio</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>72%</td>
+</tr>
+<tr valign="center">
+<td>[17.1] Continuidad de la seguridad de la información</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>68%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[17.1.1] Planificación de la continuidad de la seguridad de la información</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>65%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[17.1.2] Implementar la continuidad de la seguridad de la información</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>59%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[17.1.3] Verificación, revisión y evaluación de la continuidad de la seguridad de la información</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>80%</td>
+</tr>
+<tr valign="center">
+<td>[17.2] Redundancia</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>77%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[17.2.1] Disponibilidad de los recursos de tratamiento de la información</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>77%</td>
+</tr>
+</table>
+<h2>4.14. [18] Cumplimiento </h2>
+<table cellpadding="3pt" border=1>
+<tr valign="center">
+<td>control</td>
+<td>R</td>
+<td>[current]</td>
+<td>[target]</td>
+<td>[PILAR]</td>
+</tr>
+<tr valign="center">
+<td>[18] Cumplimiento</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>48%</td>
+</tr>
+<tr valign="center">
+<td>[18.1] Cumplimiento de los requisitos legales y contractuales</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>42%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.1.1] Identificación de la legislación aplicable y de los requisitos contractuales</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.1.2] Derechos de propiedad intelectual (DPI)</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>37%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.1.3] Protección de los registros de la organización</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.1.4] Protección y privacidad de la información de carácter personal</td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>n.a.</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.1.5] Regulación de los controles criptográficos</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>38%</td>
+</tr>
+<tr valign="center">
+<td>[18.2] Revisiones de la seguridad de la información</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>55%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.2.1] Revisión independiente de la seguridad de la información</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>47%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.2.2] Cumplimiento de las políticas y normas de seguridad</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50%</td>
+</tr>
+<tr valign="center">
+<td>&nbsp;&nbsp;&nbsp;[18.2.3] Comprobación del cumplimiento técnico</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>69%</td>
+</tr>
+</table>
+</body>
+</html>
