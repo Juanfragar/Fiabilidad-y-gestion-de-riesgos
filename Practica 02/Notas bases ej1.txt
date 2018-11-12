@@ -1,0 +1,9 @@
+P2:
+EJ1:
+
+Variables:
+	i	El conductor sufre heridas
+	ii	El conductor está realizando una conducción rápida
+	iii	Hay avisos en la carretera recordando que se respeten los límites de velocidad
+	iv	El conductor lleva puesto el cinturón de seguridad
+	v	Se produce un accidente debido a una velocidad inadecuado
