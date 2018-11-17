@@ -187,8 +187,8 @@ class Red1B
 
     potential (AccidenteMeteorologia | MalaMeteorologia)
     {
-	data = (( 0.1 0.9 )	%  MalaMeteorologia=Si
-		( 0.0001 0.9999 ));	%  MalaMeteorologia=No
+	data = (( 0.15 0.85 )	%  MalaMeteorologia=Si
+		( 0.01 0.99 ));	%  MalaMeteorologia=No
     }
 
     potential (MalaMeteorologia)
