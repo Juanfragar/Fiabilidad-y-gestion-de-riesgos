@@ -111,6 +111,8 @@ class Red1
 	label = "";
 	position = (397 543);
 	states = ("Si" "No");
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
 	HR_NodeSize = "(174, 71)";
 	HR_Group = "0";
 	HR_Desc = "";
