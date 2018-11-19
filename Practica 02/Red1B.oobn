@@ -50,14 +50,28 @@ class Red1B
     HR_Grid_Y = "40";
     HR_Grid_X = "40";
 
+    node AvisosMalaMeteorologia
+    {
+	label = "";
+	position = (477 104);
+	states = ("Si" "No");
+	HR_NodeSize = "(151, 35)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkGroup = "[AccidenteMeteorologia:0]";
+	HR_LinkMode = "[AccidenteMeteorologia:0]";
+    }
+
     node AccidentePorOtroConductor
     {
 	label = "";
-	position = (997 354);
+	position = (630 183);
 	states = ("Si" "No");
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
-	HR_NodeSize = "(190, 70)";
+	HR_NodeSize = "(168, 35)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -67,8 +81,9 @@ class Red1B
     node Airbag
     {
 	label = "";
-	position = (711 344);
+	position = (492 183);
 	states = ("Si" "No");
+	HR_NodeSize = "(74, 24)";
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
@@ -80,11 +95,11 @@ class Red1B
     node AccidenteMeteorologia
     {
 	label = "";
-	position = (512 336);
+	position = (373 180);
 	states = ("Si" "No");
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
-	HR_NodeSize = "(168, 71)";
+	HR_NodeSize = "(144, 36)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -94,11 +109,11 @@ class Red1B
     node MalaMeteorologia
     {
 	label = "";
-	position = (515 199);
+	position = (368 48);
 	states = ("Si" "No");
-	HR_LinkGroup = "[AccidenteMeteorologia:0]";
-	HR_LinkMode = "[AccidenteMeteorologia:0]";
-	HR_NodeSize = "(152, 58)";
+	HR_LinkGroup = "[AccidenteMeteorologia:0][AvisosMalaMeteorologia:0]";
+	HR_LinkMode = "[AccidenteMeteorologia:0][AvisosMalaMeteorologia:0]";
+	HR_NodeSize = "(118, 21)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -108,40 +123,40 @@ class Red1B
     node HeridasConductor
     {
 	label = "";
-	position = (350 528);
+	position = (360 276);
 	states = ("Si" "No");
 	HR_LinkGroup = "";
 	HR_LinkMode = "";
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(174, 71)";
+	HR_NodeSize = "(138, 23)";
 	HR_Group = "0";
     }
 
     node ConduccionRapida
     {
 	label = "";
-	position = (129 228);
+	position = (221 104);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(159, 73)";
-	HR_LinkGroup = "[AccidenteVelocidad:0]";
-	HR_LinkMode = "[AccidenteVelocidad:0]";
+	HR_NodeSize = "(126, 28)";
+	HR_LinkGroup = "[AccidenteVelocidad:0][AccidenteMeteorologia:0]";
+	HR_LinkMode = "[AccidenteVelocidad:0][AccidenteMeteorologia:0]";
 	HR_Group = "0";
     }
 
     node AvisosCarretera
     {
 	label = "";
-	position = (134 56);
+	position = (216 46);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(149, 86)";
+	HR_NodeSize = "(101, 28)";
 	HR_LinkGroup = "[ConduccionRapida:0]";
 	HR_LinkMode = "[ConduccionRapida:0]";
 	HR_Group = "0";
@@ -150,12 +165,12 @@ class Red1B
     node CinturonSeguridad
     {
 	label = "";
-	position = (327 362);
+	position = (91 187);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(158, 90)";
+	HR_NodeSize = "(130, 32)";
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
@@ -164,15 +179,21 @@ class Red1B
     node AccidenteVelocidad
     {
 	label = "";
-	position = (127 398);
+	position = (228 181);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(194, 85)";
+	HR_NodeSize = "(125, 32)";
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
+    }
+
+    potential (AvisosMalaMeteorologia | MalaMeteorologia)
+    {
+	data = (( 0.9 0.1 )	%  MalaMeteorologia=Si
+		( 0.01 0.99 ));	%  MalaMeteorologia=No
     }
 
     potential (AccidentePorOtroConductor)
@@ -185,10 +206,16 @@ class Red1B
 	data = ( 0.7 0.3 );
     }
 
-    potential (AccidenteMeteorologia | MalaMeteorologia)
+    potential (AccidenteMeteorologia | ConduccionRapida AvisosMalaMeteorologia MalaMeteorologia)
     {
-	data = (( 0.15 0.85 )	%  MalaMeteorologia=Si
-		( 0.01 0.99 ));	%  MalaMeteorologia=No
+	data = (((( 0.15 0.85 )	%  ConduccionRapida=Si  AvisosMalaMeteorologia=Si  MalaMeteorologia=Si
+		  ( 0.01 0.99 ))	%  ConduccionRapida=Si  AvisosMalaMeteorologia=Si  MalaMeteorologia=No
+		 (( 0.15 0.85 )	%  ConduccionRapida=Si  AvisosMalaMeteorologia=No  MalaMeteorologia=Si
+		  ( 0.01 0.99 )))	%  ConduccionRapida=Si  AvisosMalaMeteorologia=No  MalaMeteorologia=No
+		((( 0.15 0.85 )	%  ConduccionRapida=No  AvisosMalaMeteorologia=Si  MalaMeteorologia=Si
+		  ( 0.01 0.99 ))	%  ConduccionRapida=No  AvisosMalaMeteorologia=Si  MalaMeteorologia=No
+		 (( 0.15 0.85 )	%  ConduccionRapida=No  AvisosMalaMeteorologia=No  MalaMeteorologia=Si
+		  ( 0.01 0.99 ))));	%  ConduccionRapida=No  AvisosMalaMeteorologia=No  MalaMeteorologia=No
     }
 
     potential (MalaMeteorologia)
