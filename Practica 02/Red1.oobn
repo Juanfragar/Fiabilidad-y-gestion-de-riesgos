@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 class Red1
 {
     inputs = ();
@@ -150,3 +151,157 @@ class Red1
 		 ( 0.001 0.999 )));	%  CinturonSeguridad=No  AccidenteVelocidad=No
     }
 } % class Red1
+=======
+class Red1
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=bold,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node AccidenteVelocidad
+    {
+	label = "";
+	position = (234 392);
+	states = ("Si" "No");
+	HR_LinkGroup = "[HeridasConductor:0]";
+	HR_LinkMode = "[HeridasConductor:0]";
+	HR_NodeSize = "(194, 85)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node CinturonSeguridad
+    {
+	label = "";
+	position = (540 389);
+	states = ("Si" "No");
+	HR_LinkGroup = "[HeridasConductor:0]";
+	HR_LinkMode = "[HeridasConductor:0]";
+	HR_NodeSize = "(158, 90)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node AvisosCarretera
+    {
+	label = "";
+	position = (228 147);
+	states = ("Si" "No");
+	HR_LinkGroup = "[ConduccionRapida:0]";
+	HR_LinkMode = "[ConduccionRapida:0]";
+	HR_NodeSize = "(149, 86)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ConduccionRapida
+    {
+	label = "";
+	position = (230 274);
+	states = ("Si" "No");
+	HR_LinkGroup = "[AccidenteVelocidad:0]";
+	HR_LinkMode = "[AccidenteVelocidad:0]";
+	HR_NodeSize = "(159, 73)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node HeridasConductor
+    {
+	label = "";
+	position = (392 476);
+	states = ("Si" "No");
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
+	HR_NodeSize = "(174, 71)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (AccidenteVelocidad | ConduccionRapida)
+    {
+	data = (( 0.6 0.4 )	%  ConduccionRapida=Si
+		( 0.005 0.995 ));	%  ConduccionRapida=No
+    }
+
+    potential (CinturonSeguridad)
+    {
+	data = ( 0.99 0.01 );
+    }
+
+    potential (AvisosCarretera)
+    {
+	data = ( 0.8 0.2 );
+    }
+
+    potential (ConduccionRapida | AvisosCarretera)
+    {
+	data = (( 0.1 0.9 )	%  AvisosCarretera=Si
+		( 0.2 0.8 ));	%  AvisosCarretera=No
+    }
+
+    potential (HeridasConductor | CinturonSeguridad AccidenteVelocidad)
+    {
+	data = ((( 0.4 0.6 )	%  CinturonSeguridad=Si  AccidenteVelocidad=Si
+		 ( 0.01 0.99 ))	%  CinturonSeguridad=Si  AccidenteVelocidad=No
+		(( 0.98 0.02 )	%  CinturonSeguridad=No  AccidenteVelocidad=Si
+		 ( 0.001 0.999 )));	%  CinturonSeguridad=No  AccidenteVelocidad=No
+    }
+} % class Red1
+>>>>>>> Stashed changes

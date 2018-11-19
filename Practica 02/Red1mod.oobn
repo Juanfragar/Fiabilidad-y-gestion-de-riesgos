@@ -1,4 +1,4 @@
-class Red2
+class Red1mod
 {
     inputs = ();
     outputs = ();
@@ -53,7 +53,7 @@ class Red2
     node HeridasConductor
     {
 	label = "";
-	position = (350 528);
+	position = (395 406);
 	states = ("Si" "No");
 	HR_LinkGroup = "";
 	HR_LinkMode = "";
@@ -67,56 +67,57 @@ class Red2
     node ConduccionRapida
     {
 	label = "";
-	position = (190 217);
+	position = (118 122);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
 	HR_NodeSize = "(159, 73)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[AccidenteVelocidad:0]";
+	HR_LinkMode = "[AccidenteVelocidad:0]";
 	HR_Group = "0";
     }
 
     node AvisosCarretera
     {
 	label = "";
-	position = (192 43);
+	position = (351 120);
 	states = ("Si" "No");
+	HR_LinkControlPoints = "";
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
 	HR_NodeSize = "(149, 86)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[AccidenteVelocidad:0]";
+	HR_LinkMode = "[AccidenteVelocidad:0]";
 	HR_Group = "0";
     }
 
     node CinturonSeguridad
     {
 	label = "";
-	position = (536 373);
+	position = (568 266);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
 	HR_NodeSize = "(158, 90)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[HeridasConductor:0]";
+	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
     }
 
     node AccidenteVelocidad
     {
 	label = "";
-	position = (177 370);
+	position = (230 268);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
 	HR_NodeSize = "(194, 85)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[HeridasConductor:0]";
+	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
     }
 
@@ -128,10 +129,9 @@ class Red2
 		 ( 0.001 0.999 )));	%  CinturonSeguridad=No  AccidenteVelocidad=No
     }
 
-    potential (ConduccionRapida | AvisosCarretera)
+    potential (ConduccionRapida)
     {
-	data = (( 0.1 0.9 )	%  AvisosCarretera=Si
-		( 0.2 0.8 ));	%  AvisosCarretera=No
+	data = ( 0.1 0.9 );
     }
 
     potential (AvisosCarretera)
@@ -144,9 +144,11 @@ class Red2
 	data = ( 0.99 0.01 );
     }
 
-    potential (AccidenteVelocidad | ConduccionRapida)
+    potential (AccidenteVelocidad | AvisosCarretera ConduccionRapida)
     {
-	data = (( 0.6 0.4 )	%  ConduccionRapida=Si
-		( 0.005 0.995 ));	%  ConduccionRapida=No
+	data = ((( 0.6 0.4 )	%  AvisosCarretera=Si  ConduccionRapida=Si
+		 ( 0.005 0.995 ))	%  AvisosCarretera=Si  ConduccionRapida=No
+		(( 0.6 0.4 )	%  AvisosCarretera=No  ConduccionRapida=Si
+		 ( 0.005 0.995 )));	%  AvisosCarretera=No  ConduccionRapida=No
     }
-} % class Red2
+} % class Red1mod
