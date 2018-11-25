@@ -50,103 +50,308 @@ class Red2
     HR_Grid_Y = "40";
     HR_Grid_X = "40";
 
-    node HeridasConductor
+    node SistemaSAI
     {
 	label = "";
-	position = (350 528);
+	position = (1375 81);
 	states = ("Si" "No");
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
-	HR_State_0 = "";
-	HR_State_1 = "";
-	HR_Desc = "";
-	HR_NodeSize = "(174, 71)";
+	HR_LinkGroup = "[CorteElectricidad:0]";
+	HR_LinkMode = "[CorteElectricidad:0]";
+	HR_NodeSize = "(103, 64)";
 	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
-    node ConduccionRapida
+    node ABS
     {
 	label = "";
-	position = (190 217);
+	position = (120 37);
 	states = ("Si" "No");
-	HR_State_0 = "";
-	HR_State_1 = "";
-	HR_Desc = "";
-	HR_NodeSize = "(159, 73)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[AccidenteTrafico:0]";
+	HR_LinkMode = "[AccidenteTrafico:0]";
 	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
-    node AvisosCarretera
+    node BackupOffsite
     {
 	label = "";
-	position = (192 43);
+	position = (1128 639);
 	states = ("Si" "No");
-	HR_State_0 = "";
-	HR_State_1 = "";
-	HR_Desc = "";
-	HR_NodeSize = "(149, 86)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[BaseDeDatos:0][DataCenter:0]";
+	HR_LinkMode = "[BaseDeDatos:0][DataCenter:0]";
+	HR_NodeSize = "(129, 70)";
 	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node SistemaExtincion
+    {
+	label = "";
+	position = (751 644);
+	states = ("Activo" "No activo");
+	HR_LinkGroup = "[BaseDeDatos:0][DataCenter:0][Cliente:0][Coche:0][ServicioDeTransporte:0]";
+	HR_LinkMode = "[BaseDeDatos:0][DataCenter:0][Cliente:0][Coche:0][ServicioDeTransporte:0]";
+	HR_NodeSize = "(148, 61)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
     node CinturonSeguridad
     {
 	label = "";
-	position = (536 373);
+	position = (351 631);
 	states = ("Si" "No");
-	HR_State_0 = "";
-	HR_State_1 = "";
-	HR_Desc = "";
-	HR_NodeSize = "(158, 90)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_NodeSize = "(150, 60)";
+	HR_LinkGroup = "[Cliente:0][ServicioDeTransporte:0]";
+	HR_LinkMode = "[Cliente:0][ServicioDeTransporte:0]";
 	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
-    node AccidenteVelocidad
+    node CorteElectricidad
     {
 	label = "";
-	position = (177 370);
+	position = (1124 126);
 	states = ("Si" "No");
-	HR_State_0 = "";
-	HR_State_1 = "";
-	HR_Desc = "";
-	HR_NodeSize = "(194, 85)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[DataCenter:0][BaseDeDatos:0]";
+	HR_LinkMode = "[DataCenter:0][BaseDeDatos:0]";
+	HR_NodeSize = "(123, 60)";
 	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
-    potential (HeridasConductor | CinturonSeguridad AccidenteVelocidad)
+    node Incendio
     {
-	data = ((( 0.4 0.6 )	%  CinturonSeguridad=Si  AccidenteVelocidad=Si
-		 ( 0.01 0.99 ))	%  CinturonSeguridad=Si  AccidenteVelocidad=No
-		(( 0.98 0.02 )	%  CinturonSeguridad=No  AccidenteVelocidad=Si
-		 ( 0.001 0.999 )));	%  CinturonSeguridad=No  AccidenteVelocidad=No
+	label = "";
+	position = (748 115);
+	states = ("Si" "No");
+	HR_LinkGroup = "[DataCenter:0][BaseDeDatos:0][Coche:0][Cliente:0][ServicioDeTransporte:0]";
+	HR_LinkMode = "[DataCenter:0][BaseDeDatos:0][Coche:0][Cliente:0][ServicioDeTransporte:0]";
+	HR_NodeSize = "(104, 57)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
-    potential (ConduccionRapida | AvisosCarretera)
+    node AccidenteTrafico
     {
-	data = (( 0.1 0.9 )	%  AvisosCarretera=Si
-		( 0.2 0.8 ));	%  AvisosCarretera=No
+	label = "";
+	position = (352 109);
+	states = ("Si" "No");
+	HR_NodeSize = "(112, 59)";
+	HR_LinkGroup = "[Coche:0][Cliente:0][ServicioDeTransporte:0]";
+	HR_LinkMode = "[Coche:0][Cliente:0][ServicioDeTransporte:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
     }
 
-    potential (AvisosCarretera)
+    node DataCenter
     {
-	data = ( 0.8 0.2 );
+	label = "";
+	position = (948 406);
+	states = ("Funcional" "No funcional");
+	HR_NodeSize = "(138, 64)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Cliente
+    {
+	label = "";
+	position = (558 401);
+	states = ("Satisfecho" "No satisfecho");
+	HR_NodeSize = "(147, 75)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Coche
+    {
+	label = "";
+	position = (750 406);
+	states = ("Funcional" "No funcional");
+	HR_NodeSize = "(129, 60)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ServicioDeTransporte
+    {
+	label = "";
+	position = (352 397);
+	states = ("Activo" "No activo");
+	HR_NodeSize = "(155, 76)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node BaseDeDatos
+    {
+	label = "";
+	position = (1126 404);
+	states = ("Funcional" "No funcional");
+	HR_NodeSize = "(153, 77)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (SistemaSAI)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (ABS)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (BackupOffsite)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (SistemaExtincion)
+    {
+	data = ( 1 1 );
     }
 
     potential (CinturonSeguridad)
     {
-	data = ( 0.99 0.01 );
+	data = ( 1 1 );
     }
 
-    potential (AccidenteVelocidad | ConduccionRapida)
+    potential (CorteElectricidad | SistemaSAI)
     {
-	data = (( 0.6 0.4 )	%  ConduccionRapida=Si
-		( 0.005 0.995 ));	%  ConduccionRapida=No
+	data = (( 1 1 )	%  SistemaSAI=Si
+		( 1 1 ));	%  SistemaSAI=No
+    }
+
+    potential (Incendio)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (AccidenteTrafico | ABS)
+    {
+	data = (( 1 1 )	%  ABS=Si
+		( 1 1 ));	%  ABS=No
+    }
+
+    potential (DataCenter | BackupOffsite SistemaExtincion CorteElectricidad Incendio)
+    {
+	data = ((((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 )))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 ))))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+		(((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 )))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 )))));	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+    }
+
+    potential (Cliente | SistemaExtincion CinturonSeguridad Incendio AccidenteTrafico)
+    {
+	data = ((((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 )))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 ))))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+		(((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 )))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 )))));	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+    }
+
+    potential (Coche | SistemaExtincion Incendio AccidenteTrafico)
+    {
+	data = (((( 1 1 )	%  SistemaExtincion=Activo  Incendio=Si  AccidenteTrafico=Si
+		  ( 1 1 ))	%  SistemaExtincion=Activo  Incendio=Si  AccidenteTrafico=No
+		 (( 1 1 )	%  SistemaExtincion=Activo  Incendio=No  AccidenteTrafico=Si
+		  ( 1 1 )))	%  SistemaExtincion=Activo  Incendio=No  AccidenteTrafico=No
+		((( 1 1 )	%  SistemaExtincion=No activo  Incendio=Si  AccidenteTrafico=Si
+		  ( 1 1 ))	%  SistemaExtincion=No activo  Incendio=Si  AccidenteTrafico=No
+		 (( 1 1 )	%  SistemaExtincion=No activo  Incendio=No  AccidenteTrafico=Si
+		  ( 1 1 ))));	%  SistemaExtincion=No activo  Incendio=No  AccidenteTrafico=No
+    }
+
+    potential (ServicioDeTransporte | SistemaExtincion CinturonSeguridad Incendio AccidenteTrafico)
+    {
+	data = ((((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 )))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 ))))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+		(((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 )))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 1 )))));	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+    }
+
+    potential (BaseDeDatos | BackupOffsite SistemaExtincion CorteElectricidad Incendio)
+    {
+	data = ((((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 )))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 ))))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+		(((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 )))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 1 )))));	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
     }
 } % class Red2

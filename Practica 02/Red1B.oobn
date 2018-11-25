@@ -53,9 +53,9 @@ class Red1B
     node AvisosMalaMeteorologia
     {
 	label = "";
-	position = (477 104);
+	position = (949 243);
 	states = ("Si" "No");
-	HR_NodeSize = "(151, 35)";
+	HR_NodeSize = "(157, 61)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -67,11 +67,11 @@ class Red1B
     node AccidentePorOtroConductor
     {
 	label = "";
-	position = (630 183);
+	position = (956 409);
 	states = ("Si" "No");
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
-	HR_NodeSize = "(168, 35)";
+	HR_NodeSize = "(165, 75)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -81,9 +81,9 @@ class Red1B
     node Airbag
     {
 	label = "";
-	position = (492 183);
+	position = (846 358);
 	states = ("Si" "No");
-	HR_NodeSize = "(74, 24)";
+	HR_NodeSize = "(73, 39)";
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
@@ -95,11 +95,11 @@ class Red1B
     node AccidenteMeteorologia
     {
 	label = "";
-	position = (373 180);
+	position = (750 298);
 	states = ("Si" "No");
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
-	HR_NodeSize = "(144, 36)";
+	HR_NodeSize = "(148, 61)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -109,11 +109,11 @@ class Red1B
     node MalaMeteorologia
     {
 	label = "";
-	position = (368 48);
+	position = (756 145);
 	states = ("Si" "No");
 	HR_LinkGroup = "[AccidenteMeteorologia:0][AvisosMalaMeteorologia:0]";
 	HR_LinkMode = "[AccidenteMeteorologia:0][AvisosMalaMeteorologia:0]";
-	HR_NodeSize = "(118, 21)";
+	HR_NodeSize = "(132, 53)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -123,26 +123,26 @@ class Red1B
     node HeridasConductor
     {
 	label = "";
-	position = (360 276);
+	position = (752 461);
 	states = ("Si" "No");
 	HR_LinkGroup = "";
 	HR_LinkMode = "";
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(138, 23)";
+	HR_NodeSize = "(140, 55)";
 	HR_Group = "0";
     }
 
     node ConduccionRapida
     {
 	label = "";
-	position = (221 104);
+	position = (613 244);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(126, 28)";
+	HR_NodeSize = "(146, 56)";
 	HR_LinkGroup = "[AccidenteVelocidad:0][AccidenteMeteorologia:0]";
 	HR_LinkMode = "[AccidenteVelocidad:0][AccidenteMeteorologia:0]";
 	HR_Group = "0";
@@ -151,12 +151,12 @@ class Red1B
     node AvisosCarretera
     {
 	label = "";
-	position = (216 46);
+	position = (614 113);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(101, 28)";
+	HR_NodeSize = "(122, 50)";
 	HR_LinkGroup = "[ConduccionRapida:0]";
 	HR_LinkMode = "[ConduccionRapida:0]";
 	HR_Group = "0";
@@ -165,12 +165,12 @@ class Red1B
     node CinturonSeguridad
     {
 	label = "";
-	position = (91 187);
+	position = (558 425);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(130, 32)";
+	HR_NodeSize = "(125, 59)";
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
@@ -179,12 +179,12 @@ class Red1B
     node AccidenteVelocidad
     {
 	label = "";
-	position = (228 181);
+	position = (637 351);
 	states = ("Si" "No");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(125, 32)";
+	HR_NodeSize = "(135, 61)";
 	HR_LinkGroup = "[HeridasConductor:0]";
 	HR_LinkMode = "[HeridasConductor:0]";
 	HR_Group = "0";
