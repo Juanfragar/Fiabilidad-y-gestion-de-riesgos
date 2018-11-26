@@ -305,14 +305,14 @@ class Red2
 
     potential (CorteElectricidad | SubidaDeTension TormentaElectrica SistemaSAI)
     {
-	data = (((( 0.95 0.05 )	%  SubidaDeTension=Si  TormentaElectrica=Si  SistemaSAI=Si
+	data = (((( 0.05 0.95 )	%  SubidaDeTension=Si  TormentaElectrica=Si  SistemaSAI=Si
 		  ( 0.95 0.05 ))	%  SubidaDeTension=Si  TormentaElectrica=Si  SistemaSAI=No
-		 (( 1 1 )	%  SubidaDeTension=Si  TormentaElectrica=No  SistemaSAI=Si
-		  ( 1 1 )))	%  SubidaDeTension=Si  TormentaElectrica=No  SistemaSAI=No
-		((( 1 1 )	%  SubidaDeTension=No  TormentaElectrica=Si  SistemaSAI=Si
-		  ( 1 1 ))	%  SubidaDeTension=No  TormentaElectrica=Si  SistemaSAI=No
-		 (( 1 1 )	%  SubidaDeTension=No  TormentaElectrica=No  SistemaSAI=Si
-		  ( 1 1 ))));	%  SubidaDeTension=No  TormentaElectrica=No  SistemaSAI=No
+		 (( 0.03 0.97 )	%  SubidaDeTension=Si  TormentaElectrica=No  SistemaSAI=Si
+		  ( 0.99 0.01 )))	%  SubidaDeTension=Si  TormentaElectrica=No  SistemaSAI=No
+		((( 0.03 0.97 )	%  SubidaDeTension=No  TormentaElectrica=Si  SistemaSAI=Si
+		  ( 0.85 0.15 ))	%  SubidaDeTension=No  TormentaElectrica=Si  SistemaSAI=No
+		 (( 0.01 0.99 )	%  SubidaDeTension=No  TormentaElectrica=No  SistemaSAI=Si
+		  ( 0.01 0.99 ))));	%  SubidaDeTension=No  TormentaElectrica=No  SistemaSAI=No
     }
 
     potential (Incendio | TormentaElectrica)
@@ -335,93 +335,93 @@ class Red2
 
     potential (DataCenter | BackupOffsite SistemaExtincion CorteElectricidad Incendio)
     {
-	data = ((((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 )))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
-		 ((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 ))))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
-		(((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 )))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
-		 ((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 )))));	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+	data = ((((( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 0 ))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 0 )))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 0 ))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 0 ))))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+		(((( 0 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 0 1 ))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 0 )))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 0 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 0 1 ))	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 0 1 )))));	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
     }
 
     potential (Cliente | SistemaExtincion CinturonSeguridad Incendio AccidenteTrafico)
     {
-	data = ((((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 )))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
-		 ((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 ))))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
-		(((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 )))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
-		 ((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 )))));	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+	data = ((((( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 0 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 )))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 0 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 ))))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+		(((( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 0 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 )))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 0 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 )))));	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
     }
 
     potential (Coche | SistemaExtincion Incendio AccidenteTrafico)
     {
-	data = (((( 1 1 )	%  SistemaExtincion=Activo  Incendio=Si  AccidenteTrafico=Si
-		  ( 1 1 ))	%  SistemaExtincion=Activo  Incendio=Si  AccidenteTrafico=No
-		 (( 1 1 )	%  SistemaExtincion=Activo  Incendio=No  AccidenteTrafico=Si
-		  ( 1 1 )))	%  SistemaExtincion=Activo  Incendio=No  AccidenteTrafico=No
-		((( 1 1 )	%  SistemaExtincion=No activo  Incendio=Si  AccidenteTrafico=Si
-		  ( 1 1 ))	%  SistemaExtincion=No activo  Incendio=Si  AccidenteTrafico=No
-		 (( 1 1 )	%  SistemaExtincion=No activo  Incendio=No  AccidenteTrafico=Si
-		  ( 1 1 ))));	%  SistemaExtincion=No activo  Incendio=No  AccidenteTrafico=No
+	data = (((( 0 1 )	%  SistemaExtincion=Activo  Incendio=Si  AccidenteTrafico=Si
+		  ( 0 1 ))	%  SistemaExtincion=Activo  Incendio=Si  AccidenteTrafico=No
+		 (( 0 1 )	%  SistemaExtincion=Activo  Incendio=No  AccidenteTrafico=Si
+		  ( 1 0 )))	%  SistemaExtincion=Activo  Incendio=No  AccidenteTrafico=No
+		((( 0 1 )	%  SistemaExtincion=No activo  Incendio=Si  AccidenteTrafico=Si
+		  ( 0 1 ))	%  SistemaExtincion=No activo  Incendio=Si  AccidenteTrafico=No
+		 (( 0 1 )	%  SistemaExtincion=No activo  Incendio=No  AccidenteTrafico=Si
+		  ( 1 0 ))));	%  SistemaExtincion=No activo  Incendio=No  AccidenteTrafico=No
     }
 
     potential (ServicioDeTransporte | SistemaExtincion CinturonSeguridad Incendio AccidenteTrafico)
     {
-	data = ((((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 )))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
-		 ((( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 ))))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
-		(((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 )))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
-		 ((( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
-		   ( 1 1 ))	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
-		  (( 1 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
-		   ( 1 1 )))));	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+	data = ((((( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 0 ))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 )))	%  SistemaExtincion=Activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 0 ))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 ))))	%  SistemaExtincion=Activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
+		(((( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 0 ))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 )))	%  SistemaExtincion=No activo  CinturonSeguridad=Si  Incendio=No  AccidenteTrafico=No
+		 ((( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=Si
+		   ( 1 0 ))	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=Si  AccidenteTrafico=No
+		  (( 0 1 )	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=Si
+		   ( 1 0 )))));	%  SistemaExtincion=No activo  CinturonSeguridad=No  Incendio=No  AccidenteTrafico=No
     }
 
     potential (BaseDeDatos | BackupOffsite SistemaExtincion CorteElectricidad Incendio)
     {
-	data = ((((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 )))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
-		 ((( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 ))))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
-		(((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 )))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
-		 ((( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
-		   ( 1 1 ))	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
-		  (( 1 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
-		   ( 1 1 )))));	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+	data = ((((( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 0 ))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 0 )))	%  BackupOffsite=Si  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 1 0 ))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 0 ))))	%  BackupOffsite=Si  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
+		(((( 1 0 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=Si
+		   ( 0 1 ))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=Si
+		   ( 1 0 )))	%  BackupOffsite=No  SistemaExtincion=Activo  CorteElectricidad=No  Incendio=No
+		 ((( 0 1 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=Si
+		   ( 0 1 ))	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=Si  Incendio=No
+		  (( 1 0 )	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=Si
+		   ( 0 1 )))));	%  BackupOffsite=No  SistemaExtincion=No activo  CorteElectricidad=No  Incendio=No
     }
 } % class Red2
