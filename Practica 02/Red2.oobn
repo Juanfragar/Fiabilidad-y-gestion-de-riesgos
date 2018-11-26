@@ -50,10 +50,52 @@ class Red2
     HR_Grid_Y = "40";
     HR_Grid_X = "40";
 
+    node SubidaDeTension
+    {
+	label = "";
+	position = (1117 94);
+	states = ("Si" "No");
+	HR_LinkGroup = "[CorteElectricidad:0]";
+	HR_LinkMode = "[CorteElectricidad:0]";
+	HR_NodeSize = "(156, 48)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node TormentaElectrica
+    {
+	label = "";
+	position = (744 90);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Incendio:0][CorteElectricidad:0][AccidenteTrafico:0]";
+	HR_LinkMode = "[Incendio:0][CorteElectricidad:0][AccidenteTrafico:0]";
+	HR_NodeSize = "(141, 55)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ConduccionRapida
+    {
+	label = "";
+	position = (355 74);
+	states = ("Si" "No");
+	HR_NodeSize = "(136, 35)";
+	HR_LinkGroup = "[AccidenteTrafico:0]";
+	HR_LinkMode = "[AccidenteTrafico:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
     node SistemaSAI
     {
 	label = "";
-	position = (1375 81);
+	position = (1398 220);
 	states = ("Si" "No");
 	HR_LinkGroup = "[CorteElectricidad:0]";
 	HR_LinkMode = "[CorteElectricidad:0]";
@@ -67,7 +109,7 @@ class Red2
     node ABS
     {
 	label = "";
-	position = (120 37);
+	position = (98 208);
 	states = ("Si" "No");
 	HR_LinkGroup = "[AccidenteTrafico:0]";
 	HR_LinkMode = "[AccidenteTrafico:0]";
@@ -122,7 +164,7 @@ class Red2
     node CorteElectricidad
     {
 	label = "";
-	position = (1124 126);
+	position = (1123 225);
 	states = ("Si" "No");
 	HR_LinkGroup = "[DataCenter:0][BaseDeDatos:0]";
 	HR_LinkMode = "[DataCenter:0][BaseDeDatos:0]";
@@ -136,7 +178,7 @@ class Red2
     node Incendio
     {
 	label = "";
-	position = (748 115);
+	position = (742 215);
 	states = ("Si" "No");
 	HR_LinkGroup = "[DataCenter:0][BaseDeDatos:0][Coche:0][Cliente:0][ServicioDeTransporte:0]";
 	HR_LinkMode = "[DataCenter:0][BaseDeDatos:0][Coche:0][Cliente:0][ServicioDeTransporte:0]";
@@ -150,7 +192,7 @@ class Red2
     node AccidenteTrafico
     {
 	label = "";
-	position = (352 109);
+	position = (353 214);
 	states = ("Si" "No");
 	HR_NodeSize = "(112, 59)";
 	HR_LinkGroup = "[Coche:0][Cliente:0][ServicioDeTransporte:0]";
@@ -221,46 +263,74 @@ class Red2
 	HR_State_0 = "";
     }
 
+    potential (SubidaDeTension)
+    {
+	data = ( 0.05 0.95 );
+    }
+
+    potential (TormentaElectrica)
+    {
+	data = ( 0.02 0.98 );
+    }
+
+    potential (ConduccionRapida)
+    {
+	data = ( 0.65 0.35 );
+    }
+
     potential (SistemaSAI)
     {
-	data = ( 1 1 );
+	data = ( 0.99 0.01 );
     }
 
     potential (ABS)
     {
-	data = ( 1 1 );
+	data = ( 0.99 0.01 );
     }
 
     potential (BackupOffsite)
     {
-	data = ( 1 1 );
+	data = ( 0.99 0.01 );
     }
 
     potential (SistemaExtincion)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (CinturonSeguridad)
     {
-	data = ( 1 1 );
+	data = ( 0.95 0.05 );
     }
 
-    potential (CorteElectricidad | SistemaSAI)
+    potential (CorteElectricidad | SubidaDeTension TormentaElectrica SistemaSAI)
     {
-	data = (( 1 1 )	%  SistemaSAI=Si
-		( 1 1 ));	%  SistemaSAI=No
+	data = (((( 0.95 0.05 )	%  SubidaDeTension=Si  TormentaElectrica=Si  SistemaSAI=Si
+		  ( 0.95 0.05 ))	%  SubidaDeTension=Si  TormentaElectrica=Si  SistemaSAI=No
+		 (( 1 1 )	%  SubidaDeTension=Si  TormentaElectrica=No  SistemaSAI=Si
+		  ( 1 1 )))	%  SubidaDeTension=Si  TormentaElectrica=No  SistemaSAI=No
+		((( 1 1 )	%  SubidaDeTension=No  TormentaElectrica=Si  SistemaSAI=Si
+		  ( 1 1 ))	%  SubidaDeTension=No  TormentaElectrica=Si  SistemaSAI=No
+		 (( 1 1 )	%  SubidaDeTension=No  TormentaElectrica=No  SistemaSAI=Si
+		  ( 1 1 ))));	%  SubidaDeTension=No  TormentaElectrica=No  SistemaSAI=No
     }
 
-    potential (Incendio)
+    potential (Incendio | TormentaElectrica)
     {
-	data = ( 1 1 );
+	data = (( 0.85 0.15 )	%  TormentaElectrica=Si
+		( 0.05 0.95 ));	%  TormentaElectrica=No
     }
 
-    potential (AccidenteTrafico | ABS)
+    potential (AccidenteTrafico | TormentaElectrica ConduccionRapida ABS)
     {
-	data = (( 1 1 )	%  ABS=Si
-		( 1 1 ));	%  ABS=No
+	data = (((( 0.05 0.95 )	%  TormentaElectrica=Si  ConduccionRapida=Si  ABS=Si
+		  ( 0.15 0.85 ))	%  TormentaElectrica=Si  ConduccionRapida=Si  ABS=No
+		 (( 0.03 0.97 )	%  TormentaElectrica=Si  ConduccionRapida=No  ABS=Si
+		  ( 0.04 0.96 )))	%  TormentaElectrica=Si  ConduccionRapida=No  ABS=No
+		((( 0.01 0.99 )	%  TormentaElectrica=No  ConduccionRapida=Si  ABS=Si
+		  ( 0.04 0.96 ))	%  TormentaElectrica=No  ConduccionRapida=Si  ABS=No
+		 (( 0.01 0.99 )	%  TormentaElectrica=No  ConduccionRapida=No  ABS=Si
+		  ( 0.02 0.98 ))));	%  TormentaElectrica=No  ConduccionRapida=No  ABS=No
     }
 
     potential (DataCenter | BackupOffsite SistemaExtincion CorteElectricidad Incendio)
