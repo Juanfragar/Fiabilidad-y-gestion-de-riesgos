@@ -50,24 +50,66 @@ class Modifacionej01
     HR_Grid_Y = "40";
     HR_Grid_X = "40";
 
+    node FalloArticulacion
+    {
+	label = "";
+	position = (720 240);
+	states = ("Funcional" "No Funcional");
+	HR_LinkMode = "[FalloBrazoRobot:0]";
+	HR_LinkGroup = "[FalloBrazoRobot:0]";
+	HR_NodeSize = "(154, 47)";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
+    node FalloServo
+    {
+	label = "";
+	position = (520 240);
+	states = ("Funcional" "No Funcional");
+	HR_State_0 = "";
+	HR_State_1 = "";
+	HR_Desc = "";
+	HR_NodeSize = "(154, 47)";
+	HR_LinkGroup = "[FalloBrazoRobot:0]";
+	HR_LinkMode = "[FalloBrazoRobot:0]";
+	HR_Group = "0";
+    }
+
+    node FalloBateriaAuxiliar
+    {
+	label = "";
+	position = (423 299);
+	states = ("Funcional" "No Funcional");
+	HR_LinkMode = "[FalloBateria:0]";
+	HR_LinkGroup = "[FalloBateria:0]";
+	HR_NodeSize = "(154, 47)";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Group = "0";
+    }
+
     node FallosRueda4
     {
 	label = "";
-	position = (840 400);
+	position = (1400 303);
 	states = ("Funcional" "No Funcional");
 	HR_NodeSize = "(117, 45)";
 	HR_Desc = "";
 	HR_State_1 = "";
 	HR_State_0 = "";
-	HR_LinkMode = "[FalloRuedas:0]";
-	HR_LinkGroup = "[FalloRuedas:0]";
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
 	HR_Group = "0";
     }
 
     node FallosRueda3
     {
 	label = "";
-	position = (720 400);
+	position = (1207 302);
 	states = ("Funcional" "No Funcional");
 	HR_LinkGroup = "[FalloRuedas:0]";
 	HR_LinkMode = "[FalloRuedas:0]";
@@ -81,7 +123,7 @@ class Modifacionej01
     node FallosRueda2
     {
 	label = "";
-	position = (560 400);
+	position = (1071 303);
 	states = ("Funcional" "No Funcional");
 	HR_LinkGroup = "[FalloRuedas:0]";
 	HR_LinkMode = "[FalloRuedas:0]";
@@ -95,7 +137,7 @@ class Modifacionej01
     node FallosRueda1
     {
 	label = "";
-	position = (440 400);
+	position = (930 310);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloRuedas:0]";
 	HR_LinkGroup = "[FalloRuedas:0]";
@@ -109,7 +151,7 @@ class Modifacionej01
     node FalloRuedas
     {
 	label = "";
-	position = (600 240);
+	position = (1185 149);
 	states = ("Funcional" "No Funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "[FalloRobot:0]";
@@ -124,10 +166,10 @@ class Modifacionej01
     node FalloBrazoRobot
     {
 	label = "";
-	position = (400 240);
+	position = (626 146);
 	states = ("Funcional" "No Funcional");
-	HR_LinkMode = "[FalloRobot:0]";
-	HR_LinkGroup = "[FalloRobot:0]";
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
 	HR_NodeSize = "(154, 47)";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -138,21 +180,21 @@ class Modifacionej01
     node FalloBateriaSecundaria
     {
 	label = "";
-	position = (280 360);
+	position = (250 300);
 	states = ("Funcional" "No Funcional");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
 	HR_NodeSize = "(154, 47)";
-	HR_LinkGroup = "[FalloBateria:0]";
-	HR_LinkMode = "[FalloBateria:0]";
+	HR_LinkGroup = "";
+	HR_LinkMode = "";
 	HR_Group = "0";
     }
 
     node FalloBateriaPrincipal
     {
 	label = "";
-	position = (120 360);
+	position = (85 296);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloBateria:0]";
 	HR_LinkGroup = "[FalloBateria:0]";
@@ -166,7 +208,7 @@ class Modifacionej01
     node FalloBateria
     {
 	label = "";
-	position = (195 241);
+	position = (210 172);
 	states = ("Funcional" "No Funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "[FalloRobot:0]";
@@ -181,7 +223,7 @@ class Modifacionej01
     node FalloRobot
     {
 	label = "";
-	position = (399 107);
+	position = (625 40);
 	states = ("Funcional" "No funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "";
@@ -191,6 +233,21 @@ class Modifacionej01
 	HR_Desc = "";
 	HR_State_1 = "";
 	HR_State_0 = "";
+    }
+
+    potential (FalloArticulacion)
+    {
+	data = ( 1 0 );
+    }
+
+    potential (FalloServo)
+    {
+	data = ( 1 0 );
+    }
+
+    potential (FalloBateriaAuxiliar)
+    {
+	data = ( 1 0 );
     }
 
     potential (FallosRueda4)
@@ -233,9 +290,12 @@ class Modifacionej01
 		   ( 0 1 )))));	%  FallosRueda4=No Funcional  FallosRueda3=No Funcional  FallosRueda2=No Funcional  FallosRueda1=No Funcional
     }
 
-    potential (FalloBrazoRobot)
+    potential (FalloBrazoRobot | FalloArticulacion FalloServo)
     {
-	data = ( 1 0 );
+	data = ((( 1 0 )	%  FalloArticulacion=Funcional  FalloServo=Funcional
+		 ( 0 1 ))	%  FalloArticulacion=Funcional  FalloServo=No Funcional
+		(( 0 1 )	%  FalloArticulacion=No Funcional  FalloServo=Funcional
+		 ( 0 1 )));	%  FalloArticulacion=No Funcional  FalloServo=No Funcional
     }
 
     potential (FalloBateriaSecundaria)
@@ -248,12 +308,16 @@ class Modifacionej01
 	data = ( 1 0 );
     }
 
-    potential (FalloBateria | FalloBateriaSecundaria FalloBateriaPrincipal)
+    potential (FalloBateria | FalloBateriaAuxiliar FalloBateriaSecundaria FalloBateriaPrincipal)
     {
-	data = ((( 1 0 )	%  FalloBateriaSecundaria=Funcional  FalloBateriaPrincipal=Funcional
-		 ( 1 0 ))	%  FalloBateriaSecundaria=Funcional  FalloBateriaPrincipal=No Funcional
-		(( 1 0 )	%  FalloBateriaSecundaria=No Funcional  FalloBateriaPrincipal=Funcional
-		 ( 0 1 )));	%  FalloBateriaSecundaria=No Funcional  FalloBateriaPrincipal=No Funcional
+	data = (((( 1 0 )	%  FalloBateriaAuxiliar=Funcional  FalloBateriaSecundaria=Funcional  FalloBateriaPrincipal=Funcional
+		  ( 1 0 ))	%  FalloBateriaAuxiliar=Funcional  FalloBateriaSecundaria=Funcional  FalloBateriaPrincipal=No Funcional
+		 (( 1 0 )	%  FalloBateriaAuxiliar=Funcional  FalloBateriaSecundaria=No Funcional  FalloBateriaPrincipal=Funcional
+		  ( 1 0 )))	%  FalloBateriaAuxiliar=Funcional  FalloBateriaSecundaria=No Funcional  FalloBateriaPrincipal=No Funcional
+		((( 1 0 )	%  FalloBateriaAuxiliar=No Funcional  FalloBateriaSecundaria=Funcional  FalloBateriaPrincipal=Funcional
+		  ( 1 0 ))	%  FalloBateriaAuxiliar=No Funcional  FalloBateriaSecundaria=Funcional  FalloBateriaPrincipal=No Funcional
+		 (( 1 0 )	%  FalloBateriaAuxiliar=No Funcional  FalloBateriaSecundaria=No Funcional  FalloBateriaPrincipal=Funcional
+		  ( 0 1 ))));	%  FalloBateriaAuxiliar=No Funcional  FalloBateriaSecundaria=No Funcional  FalloBateriaPrincipal=No Funcional
     }
 
     potential (FalloRobot | FalloRuedas FalloBrazoRobot FalloBateria)
