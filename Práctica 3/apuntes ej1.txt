@@ -1,0 +1,17 @@
+EJERCICIO 01:
+
+ROBOT AUTOMATIZADO:
+	Dispone de 2 baterías
+	Una principal y otra de reserva
+	Cada batería tiene un tiempo de vida medio de 3 años
+	Autonomía de 4 horas de funcionamento
+
+	Brazo robot tiempo vida 5 años
+
+	Tiene 4 ruedas
+	Cada rueda tiene tiempo vida 6 años
+	Se puede operar con 3 ruedas
+
+	Trabaja 3 horas/jornada
+	Despues recarga batería
+	Wibull alfa = 2
