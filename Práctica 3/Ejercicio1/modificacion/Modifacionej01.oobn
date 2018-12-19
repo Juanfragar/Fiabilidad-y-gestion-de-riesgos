@@ -53,11 +53,11 @@ class Modifacionej01
     node FalloArticulacion
     {
 	label = "";
-	position = (720 240);
+	position = (722 261);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloBrazoRobot:0]";
 	HR_LinkGroup = "[FalloBrazoRobot:0]";
-	HR_NodeSize = "(154, 47)";
+	HR_NodeSize = "(102, 56)";
 	HR_Desc = "";
 	HR_State_1 = "";
 	HR_State_0 = "";
@@ -67,12 +67,12 @@ class Modifacionej01
     node FalloServo
     {
 	label = "";
-	position = (520 240);
+	position = (598 262);
 	states = ("Funcional" "No Funcional");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(154, 47)";
+	HR_NodeSize = "(94, 53)";
 	HR_LinkGroup = "[FalloBrazoRobot:0]";
 	HR_LinkMode = "[FalloBrazoRobot:0]";
 	HR_Group = "0";
@@ -81,11 +81,11 @@ class Modifacionej01
     node FalloBateriaAuxiliar
     {
 	label = "";
-	position = (423 299);
+	position = (605 368);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloBateria:0]";
 	HR_LinkGroup = "[FalloBateria:0]";
-	HR_NodeSize = "(154, 47)";
+	HR_NodeSize = "(127, 51)";
 	HR_Desc = "";
 	HR_State_1 = "";
 	HR_State_0 = "";
@@ -95,53 +95,53 @@ class Modifacionej01
     node FallosRueda4
     {
 	label = "";
-	position = (1400 303);
+	position = (962 387);
 	states = ("Funcional" "No Funcional");
-	HR_NodeSize = "(117, 45)";
+	HR_NodeSize = "(91, 51)";
 	HR_Desc = "";
 	HR_State_1 = "";
 	HR_State_0 = "";
-	HR_LinkMode = "";
-	HR_LinkGroup = "";
+	HR_LinkMode = "[FalloRuedas:0]";
+	HR_LinkGroup = "[FalloRuedas:0]";
 	HR_Group = "0";
     }
 
     node FallosRueda3
     {
 	label = "";
-	position = (1207 302);
+	position = (868 334);
 	states = ("Funcional" "No Funcional");
 	HR_LinkGroup = "[FalloRuedas:0]";
 	HR_LinkMode = "[FalloRuedas:0]";
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(117, 45)";
+	HR_NodeSize = "(96, 59)";
 	HR_Group = "0";
     }
 
     node FallosRueda2
     {
 	label = "";
-	position = (1071 303);
+	position = (788 399);
 	states = ("Funcional" "No Funcional");
 	HR_LinkGroup = "[FalloRuedas:0]";
 	HR_LinkMode = "[FalloRuedas:0]";
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(117, 45)";
+	HR_NodeSize = "(104, 51)";
 	HR_Group = "0";
     }
 
     node FallosRueda1
     {
 	label = "";
-	position = (930 310);
+	position = (735 348);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloRuedas:0]";
 	HR_LinkGroup = "[FalloRuedas:0]";
-	HR_NodeSize = "(117, 45)";
+	HR_NodeSize = "(98, 53)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -151,7 +151,7 @@ class Modifacionej01
     node FalloRuedas
     {
 	label = "";
-	position = (1185 149);
+	position = (852 214);
 	states = ("Funcional" "No Funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "[FalloRobot:0]";
@@ -166,10 +166,10 @@ class Modifacionej01
     node FalloBrazoRobot
     {
 	label = "";
-	position = (626 146);
+	position = (670 154);
 	states = ("Funcional" "No Funcional");
-	HR_LinkMode = "";
-	HR_LinkGroup = "";
+	HR_LinkMode = "[FalloRobot:0]";
+	HR_LinkGroup = "[FalloRobot:0]";
 	HR_NodeSize = "(154, 47)";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -180,25 +180,25 @@ class Modifacionej01
     node FalloBateriaSecundaria
     {
 	label = "";
-	position = (250 300);
+	position = (456 376);
 	states = ("Funcional" "No Funcional");
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
-	HR_NodeSize = "(154, 47)";
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_NodeSize = "(140, 50)";
+	HR_LinkGroup = "[FalloBateria:0]";
+	HR_LinkMode = "[FalloBateria:0]";
 	HR_Group = "0";
     }
 
     node FalloBateriaPrincipal
     {
 	label = "";
-	position = (85 296);
+	position = (366 325);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloBateria:0]";
 	HR_LinkGroup = "[FalloBateria:0]";
-	HR_NodeSize = "(154, 47)";
+	HR_NodeSize = "(135, 54)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -208,7 +208,7 @@ class Modifacionej01
     node FalloBateria
     {
 	label = "";
-	position = (210 172);
+	position = (478 258);
 	states = ("Funcional" "No Funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "[FalloRobot:0]";
@@ -223,7 +223,7 @@ class Modifacionej01
     node FalloRobot
     {
 	label = "";
-	position = (625 40);
+	position = (669 24);
 	states = ("Funcional" "No funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "";
