@@ -138,7 +138,7 @@ class Ejercicio01
     node FalloBateriaSecundaria
     {
 	label = "";
-	position = (280 360);
+	position = (343 345);
 	states = ("Funcional" "No Funcional");
 	HR_State_0 = "";
 	HR_State_1 = "";
@@ -152,7 +152,7 @@ class Ejercicio01
     node FalloBateriaPrincipal
     {
 	label = "";
-	position = (120 360);
+	position = (183 345);
 	states = ("Funcional" "No Funcional");
 	HR_LinkMode = "[FalloBateria:0]";
 	HR_LinkGroup = "[FalloBateria:0]";
@@ -166,7 +166,7 @@ class Ejercicio01
     node FalloBateria
     {
 	label = "";
-	position = (200 240);
+	position = (229 236);
 	states = ("Funcional" "No Funcional");
 	HR_LinkControlPoints = "";
 	HR_LinkGroup = "[FalloRobot:0]";
