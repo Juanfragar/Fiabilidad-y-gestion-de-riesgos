@@ -53,9 +53,9 @@ class Ej2
     node EscenarioFinal
     {
 	label = "";
-	position = (435 378);
+	position = (434 391);
 	states = ("Escenario 01: Art\303\255culo perdido" "Escenario 02: Art\303\255culo enviado con retraso" "Escenario 03: Art\303\255culo enviado");
-	HR_NodeSize = "(248, 121)";
+	HR_NodeSize = "(191, 95)";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_2 = "";
@@ -66,7 +66,7 @@ class Ej2
     node OperadorHumano
     {
 	label = "";
-	position = (431 179);
+	position = (433 236);
 	states = ("Falla" "No Falla");
 	HR_LinkGroup = "[EscenarioFinal:0]";
 	HR_LinkMode = "[EscenarioFinal:0]";
@@ -80,7 +80,7 @@ class Ej2
     node RobotAuxiliar
     {
 	label = "";
-	position = (842 107);
+	position = (641 199);
 	states = ("Falla" "No Falla");
 	HR_LinkGroup = "[OperadorHumano:0][EscenarioFinal:0]";
 	HR_LinkMode = "[OperadorHumano:0][EscenarioFinal:0]";
@@ -94,7 +94,7 @@ class Ej2
     node RobotPrincipal
     {
 	label = "";
-	position = (117 108);
+	position = (252 199);
 	states = ("Falla" "No Falla");
 	HR_LinkGroup = "[OperadorHumano:0][RobotAuxiliar:0][EscenarioFinal:0]";
 	HR_LinkMode = "[OperadorHumano:0][RobotAuxiliar:0][EscenarioFinal:0]";
