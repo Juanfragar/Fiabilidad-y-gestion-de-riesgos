@@ -50,44 +50,15 @@ class Ej2
     HR_Grid_Y = "40";
     HR_Grid_X = "40";
 
-    node Escenario3ArticuloEnviado
+    node EscenarioFinal
     {
 	label = "";
-	position = (789 396);
-	states = ("Ocurre" "No Ocurre");
-	HR_NodeSize = "(192, 41)";
-	HR_Desc = "";
-	HR_State_1 = "";
-	HR_State_0 = "";
-	HR_LinkMode = "";
-	HR_LinkGroup = "";
-	HR_Group = "0";
-    }
-
-    node Escenario2ArticuloEnviadoConRetraso
-    {
-	label = "";
-	position = (476 395);
-	states = ("Ocurre" "No Ocurre");
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
-	HR_State_0 = "";
-	HR_State_1 = "";
-	HR_Desc = "";
-	HR_NodeSize = "(249, 49)";
-	HR_Group = "0";
-    }
-
-    node Escenario1ArticuloPerdido
-    {
-	label = "";
-	position = (174 392);
-	states = ("Ocurre" "No Ocurre");
-	HR_LinkMode = "";
-	HR_LinkGroup = "";
-	HR_NodeSize = "(192, 41)";
+	position = (434 391);
+	states = ("Escenario 01: Art\303\255culo perdido" "Escenario 02: Art\303\255culo enviado con retraso" "Escenario 03: Art\303\255culo enviado");
+	HR_NodeSize = "(191, 95)";
 	HR_Group = "0";
 	HR_Desc = "";
+	HR_State_2 = "";
 	HR_State_1 = "";
 	HR_State_0 = "";
     }
@@ -95,10 +66,10 @@ class Ej2
     node OperadorHumano
     {
 	label = "";
-	position = (432 65);
+	position = (433 236);
 	states = ("Falla" "No Falla");
-	HR_LinkGroup = "[Escenario1ArticuloPerdido:0][Escenario2ArticuloEnviadoConRetraso:0][Escenario3ArticuloEnviado:0]";
-	HR_LinkMode = "[Escenario1ArticuloPerdido:0][Escenario2ArticuloEnviadoConRetraso:0][Escenario3ArticuloEnviado:0]";
+	HR_LinkGroup = "[EscenarioFinal:0]";
+	HR_LinkMode = "[EscenarioFinal:0]";
 	HR_NodeSize = "(151, 51)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -109,10 +80,10 @@ class Ej2
     node RobotAuxiliar
     {
 	label = "";
-	position = (823 139);
+	position = (641 199);
 	states = ("Falla" "No Falla");
-	HR_LinkGroup = "[Escenario1ArticuloPerdido:0][Escenario2ArticuloEnviadoConRetraso:0][OperadorHumano:0]";
-	HR_LinkMode = "[Escenario1ArticuloPerdido:0][Escenario2ArticuloEnviadoConRetraso:0][OperadorHumano:0]";
+	HR_LinkGroup = "[OperadorHumano:0][EscenarioFinal:0]";
+	HR_LinkMode = "[OperadorHumano:0][EscenarioFinal:0]";
 	HR_NodeSize = "(116, 57)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -123,10 +94,10 @@ class Ej2
     node RobotPrincipal
     {
 	label = "";
-	position = (122 141);
+	position = (252 199);
 	states = ("Falla" "No Falla");
-	HR_LinkGroup = "[OperadorHumano:0][RobotAuxiliar:0][Escenario1ArticuloPerdido:0][Escenario2ArticuloEnviadoConRetraso:0][Escenario3ArticuloEnviado:0]";
-	HR_LinkMode = "[OperadorHumano:0][RobotAuxiliar:0][Escenario1ArticuloPerdido:0][Escenario2ArticuloEnviadoConRetraso:0][Escenario3ArticuloEnviado:0]";
+	HR_LinkGroup = "[OperadorHumano:0][RobotAuxiliar:0][EscenarioFinal:0]";
+	HR_LinkMode = "[OperadorHumano:0][RobotAuxiliar:0][EscenarioFinal:0]";
 	HR_NodeSize = "(104, 50)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -134,36 +105,16 @@ class Ej2
 	HR_State_0 = "";
     }
 
-    potential (Escenario3ArticuloEnviado | OperadorHumano RobotPrincipal)
+    potential (EscenarioFinal | RobotAuxiliar OperadorHumano RobotPrincipal)
     {
-	data = ((( 0 1 )	%  OperadorHumano=Falla  RobotPrincipal=Falla
-		 ( 0 1 ))	%  OperadorHumano=Falla  RobotPrincipal=No Falla
-		(( 0 1 )	%  OperadorHumano=No Falla  RobotPrincipal=Falla
-		 ( 1 0 )));	%  OperadorHumano=No Falla  RobotPrincipal=No Falla
-    }
-
-    potential (Escenario2ArticuloEnviadoConRetraso | RobotAuxiliar OperadorHumano RobotPrincipal)
-    {
-	data = (((( 0 1 )	%  RobotAuxiliar=Falla  OperadorHumano=Falla  RobotPrincipal=Falla
-		  ( 0 1 ))	%  RobotAuxiliar=Falla  OperadorHumano=Falla  RobotPrincipal=No Falla
-		 (( 0 1 )	%  RobotAuxiliar=Falla  OperadorHumano=No Falla  RobotPrincipal=Falla
-		  ( 0 1 )))	%  RobotAuxiliar=Falla  OperadorHumano=No Falla  RobotPrincipal=No Falla
-		((( 0 1 )	%  RobotAuxiliar=No Falla  OperadorHumano=Falla  RobotPrincipal=Falla
-		  ( 0 1 ))	%  RobotAuxiliar=No Falla  OperadorHumano=Falla  RobotPrincipal=No Falla
-		 (( 1 0 )	%  RobotAuxiliar=No Falla  OperadorHumano=No Falla  RobotPrincipal=Falla
-		  ( 0 1 ))));	%  RobotAuxiliar=No Falla  OperadorHumano=No Falla  RobotPrincipal=No Falla
-    }
-
-    potential (Escenario1ArticuloPerdido | RobotAuxiliar OperadorHumano RobotPrincipal)
-    {
-	data = (((( 1 0 )	%  RobotAuxiliar=Falla  OperadorHumano=Falla  RobotPrincipal=Falla
-		  ( 1 0 ))	%  RobotAuxiliar=Falla  OperadorHumano=Falla  RobotPrincipal=No Falla
-		 (( 1 0 )	%  RobotAuxiliar=Falla  OperadorHumano=No Falla  RobotPrincipal=Falla
-		  ( 0 1 )))	%  RobotAuxiliar=Falla  OperadorHumano=No Falla  RobotPrincipal=No Falla
-		((( 1 0 )	%  RobotAuxiliar=No Falla  OperadorHumano=Falla  RobotPrincipal=Falla
-		  ( 1 0 ))	%  RobotAuxiliar=No Falla  OperadorHumano=Falla  RobotPrincipal=No Falla
-		 (( 0 1 )	%  RobotAuxiliar=No Falla  OperadorHumano=No Falla  RobotPrincipal=Falla
-		  ( 0 1 ))));	%  RobotAuxiliar=No Falla  OperadorHumano=No Falla  RobotPrincipal=No Falla
+	data = (((( 1 0 0 )	%  RobotAuxiliar=Falla  OperadorHumano=Falla  RobotPrincipal=Falla
+		  ( 1 0 0 ))	%  RobotAuxiliar=Falla  OperadorHumano=Falla  RobotPrincipal=No Falla
+		 (( 1 0 0 )	%  RobotAuxiliar=Falla  OperadorHumano=No Falla  RobotPrincipal=Falla
+		  ( 0 0 1 )))	%  RobotAuxiliar=Falla  OperadorHumano=No Falla  RobotPrincipal=No Falla
+		((( 1 0 0 )	%  RobotAuxiliar=No Falla  OperadorHumano=Falla  RobotPrincipal=Falla
+		  ( 1 0 0 ))	%  RobotAuxiliar=No Falla  OperadorHumano=Falla  RobotPrincipal=No Falla
+		 (( 0 1 0 )	%  RobotAuxiliar=No Falla  OperadorHumano=No Falla  RobotPrincipal=Falla
+		  ( 0 0 1 ))));	%  RobotAuxiliar=No Falla  OperadorHumano=No Falla  RobotPrincipal=No Falla
     }
 
     potential (OperadorHumano | RobotAuxiliar RobotPrincipal)
