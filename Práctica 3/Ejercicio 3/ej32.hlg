@@ -1,0 +1,108 @@
+Thu Jan 10 13:55:16 2019
+
+
+Moral links:
+
+
+
+Triangulating prime component with 4 members:
+    EscenarioFinal, CocheFuncional, ServidorPrincipalFuncional,
+    ConductorTieneCarne
+This component is a clique of cost 16
+
+
+Total cost of triangulation for all prime components is 16
+
+
+Elimination sequence:
+
+    ConductorTieneCarne
+    ServidorPrincipalFuncional
+    CocheFuncional
+    EscenarioFinal
+
+
+Cliques:
+
+Clique 1, 4 members, table size = 16:
+    EscenarioFinal, CocheFuncional, ServidorPrincipalFuncional,
+    ConductorTieneCarne
+
+Total clique table size: 16
+
+
+The junction forest:
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node EscenarioFinal assigned to clique 1
+    Node CocheFuncional assigned to clique 1
+    Node ServidorPrincipalFuncional assigned to clique 1
+    Node ConductorTieneCarne assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+Potential for CocheFuncional has a zero-sum distribution for:
+    ConductorTieneCarne = "No"
+    ServidorPrincipalFuncional = "No"
+
+Potential for ServidorPrincipalFuncional has a zero-sum distribution for:
+    ConductorTieneCarne = "No"
+Thu Jan 10 13:56:55 2019
+
+
+Moral links:
+
+
+
+Triangulating prime component with 4 members:
+    EscenarioFinal, CocheFuncional, ServidorPrincipalFuncional,
+    ConductorTieneCarne
+This component is a clique of cost 16
+
+
+Total cost of triangulation for all prime components is 16
+
+
+Elimination sequence:
+
+    ConductorTieneCarne
+    ServidorPrincipalFuncional
+    CocheFuncional
+    EscenarioFinal
+
+
+Cliques:
+
+Clique 1, 4 members, table size = 16:
+    EscenarioFinal, CocheFuncional, ServidorPrincipalFuncional,
+    ConductorTieneCarne
+
+Total clique table size: 16
+
+
+The junction forest:
+
+Creating junction tree with clique 1 as root ...
+
+
+Assignment of potentials to cliques:
+
+    Node EscenarioFinal assigned to clique 1
+    Node CocheFuncional assigned to clique 1
+    Node ServidorPrincipalFuncional assigned to clique 1
+    Node ConductorTieneCarne assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+Potential for CocheFuncional has a zero-sum distribution for:
+    ConductorTieneCarne = "No"
+    ServidorPrincipalFuncional = "No"
+
+Potential for ServidorPrincipalFuncional has a zero-sum distribution for:
+    ConductorTieneCarne = "No"

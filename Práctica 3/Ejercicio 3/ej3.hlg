@@ -1,0 +1,183 @@
+Thu Jan 10 13:14:54 2019
+
+
+Moral links:
+
+    Marrying Rueda3 and Rueda4
+    Marrying Rueda2 and Rueda4
+    Marrying Rueda2 and Rueda3
+    Marrying Rueda1 and Rueda4
+    Marrying Rueda1 and Rueda3
+    Marrying Rueda1 and Rueda2
+    Marrying SistemaDireccion and Ruedas
+    Marrying Fuente1 and Fuente2
+    Marrying HDA and HDB
+    Marrying DiscosDuros and FuentesAlimentacion
+    Marrying Coches and Conductores
+    Marrying ServidorPrincipal and Conductores
+    Marrying ServidorPrincipal and Coches
+
+
+Triangulating prime component with 3 members:
+    HDB, HDA, DiscosDuros
+This component is a clique of cost 8
+
+Triangulating prime component with 3 members:
+    FuentesAlimentacion, Fuente2, Fuente1
+This component is a clique of cost 8
+
+Triangulating prime component with 5 members:
+    Rueda4, Rueda3, Rueda2, Rueda1, Ruedas
+This component is a clique of cost 32
+
+Triangulating prime component with 3 members:
+    FuentesAlimentacion, DiscosDuros, ServidorPrincipal
+This component is a clique of cost 8
+
+Triangulating prime component with 3 members:
+    Ruedas, SistemaDireccion, Coches
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    Carne, Conductores
+This component is a clique of cost 4
+
+Triangulating prime component with 4 members:
+    Conductores, Coches, ServidorPrincipal, UBER
+This component is a clique of cost 16
+
+
+Total cost of triangulation for all prime components is 84
+
+
+Elimination sequence:
+
+    Rueda1
+    Rueda2
+    Rueda3
+    Rueda4
+    SistemaDireccion
+    Ruedas
+    Fuente1
+    Fuente2
+    HDA
+    HDB
+    DiscosDuros
+    FuentesAlimentacion
+    UBER
+    ServidorPrincipal
+    Coches
+    Carne
+    Conductores
+
+
+Cliques:
+
+Clique 7, 2 members, table size = 4:
+    Conductores, Carne
+
+Clique 6, 4 members, table size = 16:
+    Conductores, Coches, ServidorPrincipal, UBER
+
+Clique 5, 3 members, table size = 8:
+    ServidorPrincipal, FuentesAlimentacion, DiscosDuros
+
+Clique 4, 3 members, table size = 8:
+    DiscosDuros, HDB, HDA
+
+Clique 3, 3 members, table size = 8:
+    FuentesAlimentacion, Fuente2, Fuente1
+
+Clique 2, 3 members, table size = 8:
+    Coches, Ruedas, SistemaDireccion
+
+Clique 1, 5 members, table size = 32:
+    Ruedas, Rueda4, Rueda3, Rueda2, Rueda1
+
+Total clique table size: 84
+
+
+The junction forest:
+
+Creating junction tree with clique 7 as root ...
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 2:
+    Conductores
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    ServidorPrincipal
+
+Cliques 4 and 5 linked, separator has 1 member and table size = 2:
+    DiscosDuros
+
+Cliques 3 and 5 linked, separator has 1 member and table size = 2:
+    FuentesAlimentacion
+
+Cliques 2 and 6 linked, separator has 1 member and table size = 2:
+    Coches
+
+Cliques 1 and 2 linked, separator has 1 member and table size = 2:
+    Ruedas
+
+
+Assignment of potentials to cliques:
+
+    Node Rueda4 assigned to clique 1
+    Node Rueda3 assigned to clique 1
+    Node Rueda2 assigned to clique 1
+    Node Rueda1 assigned to clique 1
+    Node FuentesAlimentacion assigned to clique 3
+    Node Ruedas assigned to clique 1
+    Node SistemaDireccion assigned to clique 2
+    Node Carne assigned to clique 7
+    Node Fuente2 assigned to clique 3
+    Node Fuente1 assigned to clique 3
+    Node HDB assigned to clique 4
+    Node HDA assigned to clique 4
+    Node DiscosDuros assigned to clique 4
+    Node Conductores assigned to clique 7
+    Node Coches assigned to clique 2
+    Node ServidorPrincipal assigned to clique 5
+    Node UBER assigned to clique 6
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    Rueda4 --> "Buen estado"
+
+    Rueda3 --> "Buen estado"
+
+    Rueda2 --> "Buen estado"
+
+    Rueda1 --> "Buen estado"
+
+    FuentesAlimentacion --> "Fuente"
+
+    Ruedas --> "Funcional"
+
+    SistemaDireccion --> "Funcional"
+
+    Carne --> "Funcional"
+
+    Fuente2 --> "Funcional"
+
+    Fuente1 --> "Funcional"
+
+    HDB --> "Funcional"
+
+    HDA --> "Funcional"
+
+    DiscosDuros --> "Funcional"
+
+    Conductores --> "Funcional"
+
+    Coches --> "Funcional"
+
+    ServidorPrincipal --> "Funcional"
+
+    UBER --> "Funcional"

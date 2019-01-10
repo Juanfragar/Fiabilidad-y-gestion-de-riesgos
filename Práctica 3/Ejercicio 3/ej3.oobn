@@ -55,8 +55,8 @@ class ej3
 	label = "";
 	position = (785 453);
 	states = ("Buen estado" "Mal estado");
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[Ruedas:0]";
+	HR_LinkMode = "[Ruedas:0]";
 	HR_State_0 = "";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -68,8 +68,8 @@ class ej3
 	label = "";
 	position = (693 448);
 	states = ("Buen estado" "Mal estado");
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[Ruedas:0]";
+	HR_LinkMode = "[Ruedas:0]";
 	HR_State_0 = "";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -81,8 +81,8 @@ class ej3
 	label = "";
 	position = (600 448);
 	states = ("Buen estado" "Mal estado");
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	HR_LinkGroup = "[Ruedas:0]";
+	HR_LinkMode = "[Ruedas:0]";
 	HR_State_0 = "";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -94,8 +94,8 @@ class ej3
 	label = "";
 	position = (495 447);
 	states = ("Buen estado" "Mal estado");
-	HR_LinkMode = "";
-	HR_LinkGroup = "";
+	HR_LinkMode = "[Ruedas:0]";
+	HR_LinkGroup = "[Ruedas:0]";
 	HR_State_1 = "";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -106,7 +106,9 @@ class ej3
     {
 	label = "";
 	position = (293 278);
-	states = ("Funcional" "No funcional");
+	states = ("Fuente" "No fuente");
+	HR_LinkGroup = "[ServidorPrincipal:0]";
+	HR_LinkMode = "[ServidorPrincipal:0]";
 	HR_NodeSize = "(165, 41)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -117,8 +119,10 @@ class ej3
     node Ruedas
     {
 	label = "";
-	position = (564 331);
+	position = (565 331);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[Coches:0]";
+	HR_LinkMode = "[Coches:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -130,6 +134,8 @@ class ej3
 	label = "";
 	position = (432 310);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[Coches:0]";
+	HR_LinkMode = "[Coches:0]";
 	HR_NodeSize = "(139, 45)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -142,6 +148,8 @@ class ej3
 	label = "";
 	position = (742 310);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[Conductores:0]";
+	HR_LinkMode = "[Conductores:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -151,8 +159,10 @@ class ej3
     node Fuente2
     {
 	label = "";
-	position = (327 352);
+	position = (325 352);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[FuentesAlimentacion:0]";
+	HR_LinkMode = "[FuentesAlimentacion:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -164,6 +174,8 @@ class ej3
 	label = "";
 	position = (239 354);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[FuentesAlimentacion:0]";
+	HR_LinkMode = "[FuentesAlimentacion:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -175,6 +187,8 @@ class ej3
 	label = "";
 	position = (144 356);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[DiscosDuros:0]";
+	HR_LinkMode = "[DiscosDuros:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -186,6 +200,8 @@ class ej3
 	label = "";
 	position = (45 354);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[DiscosDuros:0]";
+	HR_LinkMode = "[DiscosDuros:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -197,6 +213,8 @@ class ej3
 	label = "";
 	position = (86 285);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[ServidorPrincipal:0]";
+	HR_LinkMode = "[ServidorPrincipal:0]";
 	HR_NodeSize = "(103, 47)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -209,6 +227,8 @@ class ej3
 	label = "";
 	position = (740 216);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[UBER:0]";
+	HR_LinkMode = "[UBER:0]";
 	HR_NodeSize = "(125, 45)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -219,8 +239,10 @@ class ej3
     node Coches
     {
 	label = "";
-	position = (508 209);
+	position = (508 208);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[UBER:0]";
+	HR_LinkMode = "[UBER:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_1 = "";
@@ -232,6 +254,8 @@ class ej3
 	label = "";
 	position = (213 203);
 	states = ("Funcional" "No funcional");
+	HR_LinkGroup = "[UBER:0]";
+	HR_LinkMode = "[UBER:0]";
 	HR_NodeSize = "(152, 44)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -252,86 +276,121 @@ class ej3
 
     potential (Rueda4)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (Rueda3)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (Rueda2)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (Rueda1)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
-    potential (FuentesAlimentacion)
+    potential (FuentesAlimentacion | Fuente2 Fuente1)
     {
-	data = ( 1 1 );
+	data = ((( 1 0 )	%  Fuente2=Funcional  Fuente1=Funcional
+		 ( 1 0 ))	%  Fuente2=Funcional  Fuente1=No funcional
+		(( 1 0 )	%  Fuente2=No funcional  Fuente1=Funcional
+		 ( 0 1 )));	%  Fuente2=No funcional  Fuente1=No funcional
     }
 
-    potential (Ruedas)
+    potential (Ruedas | Rueda4 Rueda3 Rueda2 Rueda1)
     {
-	data = ( 1 1 );
+	data = ((((( 1 0 )	%  Rueda4=Buen estado  Rueda3=Buen estado  Rueda2=Buen estado  Rueda1=Buen estado
+		   ( 0 1 ))	%  Rueda4=Buen estado  Rueda3=Buen estado  Rueda2=Buen estado  Rueda1=Mal estado
+		  (( 0 1 )	%  Rueda4=Buen estado  Rueda3=Buen estado  Rueda2=Mal estado  Rueda1=Buen estado
+		   ( 0 1 )))	%  Rueda4=Buen estado  Rueda3=Buen estado  Rueda2=Mal estado  Rueda1=Mal estado
+		 ((( 0 1 )	%  Rueda4=Buen estado  Rueda3=Mal estado  Rueda2=Buen estado  Rueda1=Buen estado
+		   ( 0 1 ))	%  Rueda4=Buen estado  Rueda3=Mal estado  Rueda2=Buen estado  Rueda1=Mal estado
+		  (( 0 1 )	%  Rueda4=Buen estado  Rueda3=Mal estado  Rueda2=Mal estado  Rueda1=Buen estado
+		   ( 0 1 ))))	%  Rueda4=Buen estado  Rueda3=Mal estado  Rueda2=Mal estado  Rueda1=Mal estado
+		(((( 0 1 )	%  Rueda4=Mal estado  Rueda3=Buen estado  Rueda2=Buen estado  Rueda1=Buen estado
+		   ( 0 1 ))	%  Rueda4=Mal estado  Rueda3=Buen estado  Rueda2=Buen estado  Rueda1=Mal estado
+		  (( 0 1 )	%  Rueda4=Mal estado  Rueda3=Buen estado  Rueda2=Mal estado  Rueda1=Buen estado
+		   ( 0 1 )))	%  Rueda4=Mal estado  Rueda3=Buen estado  Rueda2=Mal estado  Rueda1=Mal estado
+		 ((( 0 1 )	%  Rueda4=Mal estado  Rueda3=Mal estado  Rueda2=Buen estado  Rueda1=Buen estado
+		   ( 0 1 ))	%  Rueda4=Mal estado  Rueda3=Mal estado  Rueda2=Buen estado  Rueda1=Mal estado
+		  (( 0 1 )	%  Rueda4=Mal estado  Rueda3=Mal estado  Rueda2=Mal estado  Rueda1=Buen estado
+		   ( 0 1 )))));	%  Rueda4=Mal estado  Rueda3=Mal estado  Rueda2=Mal estado  Rueda1=Mal estado
     }
 
     potential (SistemaDireccion)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (Carne)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (Fuente2)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (Fuente1)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (HDB)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
     potential (HDA)
     {
-	data = ( 1 1 );
+	data = ( 1 0 );
     }
 
-    potential (DiscosDuros)
+    potential (DiscosDuros | HDA HDB)
     {
-	data = ( 1 1 );
+	data = ((( 1 0 )	%  HDA=Funcional  HDB=Funcional
+		 ( 0 1 ))	%  HDA=Funcional  HDB=No funcional
+		(( 0 1 )	%  HDA=No funcional  HDB=Funcional
+		 ( 0 1 )));	%  HDA=No funcional  HDB=No funcional
     }
 
-    potential (Conductores)
+    potential (Conductores | Carne)
     {
-	data = ( 1 1 );
+	data = (( 1 0 )	%  Carne=Funcional
+		( 0 1 ));	%  Carne=No funcional
     }
 
-    potential (Coches)
+    potential (Coches | SistemaDireccion Ruedas)
     {
-	data = ( 1 1 );
+	data = ((( 1 0 )	%  SistemaDireccion=Funcional  Ruedas=Funcional
+		 ( 0 1 ))	%  SistemaDireccion=Funcional  Ruedas=No funcional
+		(( 0 1 )	%  SistemaDireccion=No funcional  Ruedas=Funcional
+		 ( 0 1 )));	%  SistemaDireccion=No funcional  Ruedas=No funcional
     }
 
-    potential (ServidorPrincipal)
+    potential (ServidorPrincipal | FuentesAlimentacion DiscosDuros)
     {
-	data = ( 1 1 );
+	data = ((( 1 0 )	%  FuentesAlimentacion=Fuente  DiscosDuros=Funcional
+		 ( 0 1 ))	%  FuentesAlimentacion=Fuente  DiscosDuros=No funcional
+		(( 0 1 )	%  FuentesAlimentacion=No fuente  DiscosDuros=Funcional
+		 ( 0 1 )));	%  FuentesAlimentacion=No fuente  DiscosDuros=No funcional
     }
 
-    potential (UBER)
+    potential (UBER | Conductores Coches ServidorPrincipal)
     {
-	data = ( 1 1 );
+	data = (((( 1 0 )	%  Conductores=Funcional  Coches=Funcional  ServidorPrincipal=Funcional
+		  ( 0 1 ))	%  Conductores=Funcional  Coches=Funcional  ServidorPrincipal=No funcional
+		 (( 0 1 )	%  Conductores=Funcional  Coches=No funcional  ServidorPrincipal=Funcional
+		  ( 0 1 )))	%  Conductores=Funcional  Coches=No funcional  ServidorPrincipal=No funcional
+		((( 0 1 )	%  Conductores=No funcional  Coches=Funcional  ServidorPrincipal=Funcional
+		  ( 0 1 ))	%  Conductores=No funcional  Coches=Funcional  ServidorPrincipal=No funcional
+		 (( 0 1 )	%  Conductores=No funcional  Coches=No funcional  ServidorPrincipal=Funcional
+		  ( 0 1 ))));	%  Conductores=No funcional  Coches=No funcional  ServidorPrincipal=No funcional
     }
 } % class ej3
