@@ -1,0 +1,192 @@
+class unnamed1
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=bold,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    utility Utilidad
+    {
+	label = "";
+	position = (478 289);
+	HR_Group = "0";
+	HR_Desc = "";
+    }
+
+    node FalloDosDiscos
+    {
+	label = "";
+	position = (621 239);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Utilidad:0]";
+	HR_LinkMode = "[Utilidad:0]";
+	HR_NodeSize = "(104, 41)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node FalloUnDisco
+    {
+	label = "";
+	position = (333 227);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Utilidad:0]";
+	HR_LinkMode = "[Utilidad:0]";
+	HR_NodeSize = "(105, 44)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    decision DosDiscos
+    {
+	label = "";
+	position = (625 127);
+	states = ("A" "B");
+	HR_LinkGroup = "[FalloDosDiscos:0][Utilidad:0]";
+	HR_LinkMode = "[FalloDosDiscos:0][Utilidad:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    decision UnDisco
+    {
+	label = "";
+	position = (323 125);
+	states = ("A" "B");
+	HR_LinkGroup = "[FalloUnDisco:0][Utilidad:0]";
+	HR_LinkMode = "[FalloUnDisco:0][Utilidad:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    decision Salvaguarda
+    {
+	label = "";
+	position = (484 78);
+	states = ("Un disco" "Dos discos");
+	HR_LinkGroup = "[UnDisco:0][DosDiscos:0][Utilidad:0]";
+	HR_LinkMode = "[UnDisco:0][DosDiscos:0][Utilidad:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (Utilidad | Salvaguarda DosDiscos UnDisco FalloDosDiscos FalloUnDisco)
+    {
+	data = ((((( 1	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 1	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
+		  (( 0	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 )))	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
+		 ((( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
+		  (( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))))	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
+		(((( 0	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
+		  (( 0	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 )))	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
+		 ((( 0	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
+		  (( 0	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 )))));	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
+    }
+
+    potential (FalloDosDiscos | DosDiscos)
+    {
+	data = (( 0.86 0.14 )	%  DosDiscos=A
+		( 0.63 0.37 ));	%  DosDiscos=B
+    }
+
+    potential (FalloUnDisco | UnDisco)
+    {
+	data = (( 0.86 0.14 )	%  UnDisco=A
+		( 0.63 0.37 ));	%  UnDisco=B
+    }
+
+    potential (DosDiscos | Salvaguarda)
+    {
+	data = (( 1 1 )	%  Salvaguarda=Un disco
+		( 1 1 ));	%  Salvaguarda=Dos discos
+    }
+
+    potential (UnDisco | Salvaguarda)
+    {
+	data = (( 1 1 )	%  Salvaguarda=Un disco
+		( 1 1 ));	%  Salvaguarda=Dos discos
+    }
+
+    potential (Salvaguarda)
+    {
+	data = ( 1 1 );
+    }
+} % class unnamed1
