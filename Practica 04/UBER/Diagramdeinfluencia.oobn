@@ -53,7 +53,8 @@ class Diagramdeinfluencia
     utility Utilidad
     {
 	label = "";
-	position = (361 266);
+	position = (383 370);
+	HR_NodeSize = "(148, 77)";
 	HR_Group = "0";
 	HR_Desc = "";
     }
@@ -61,7 +62,7 @@ class Diagramdeinfluencia
     node FalloReparar
     {
 	label = "";
-	position = (220 149);
+	position = (232 180);
 	states = ("Si" "No");
 	HR_LinkGroup = "[Utilidad:0]";
 	HR_LinkMode = "[Utilidad:0]";
@@ -102,18 +103,18 @@ class Diagramdeinfluencia
 
     potential (Utilidad | Salvaguarda FalloReemplazar FalloReparar)
     {
-	data = ((( 0	%  Salvaguarda=Reemplazar  FalloReemplazar=Si  FalloReparar=Si
-		   0 )	%  Salvaguarda=Reemplazar  FalloReemplazar=Si  FalloReparar=No
-		 ( 0	%  Salvaguarda=Reemplazar  FalloReemplazar=No  FalloReparar=Si
-		   0 ))	%  Salvaguarda=Reemplazar  FalloReemplazar=No  FalloReparar=No
-		(( 0	%  Salvaguarda=Reparar  FalloReemplazar=Si  FalloReparar=Si
-		   0 )	%  Salvaguarda=Reparar  FalloReemplazar=Si  FalloReparar=No
-		 ( 0	%  Salvaguarda=Reparar  FalloReemplazar=No  FalloReparar=Si
-		   0 ))	%  Salvaguarda=Reparar  FalloReemplazar=No  FalloReparar=No
-		(( 0	%  Salvaguarda=Mantenimiento  FalloReemplazar=Si  FalloReparar=Si
-		   0 )	%  Salvaguarda=Mantenimiento  FalloReemplazar=Si  FalloReparar=No
-		 ( 0	%  Salvaguarda=Mantenimiento  FalloReemplazar=No  FalloReparar=Si
-		   0 )));	%  Salvaguarda=Mantenimiento  FalloReemplazar=No  FalloReparar=No
+	data = ((( -40250	%  Salvaguarda=Reemplazar  FalloReemplazar=Si  FalloReparar=Si
+		   -40250 )	%  Salvaguarda=Reemplazar  FalloReemplazar=Si  FalloReparar=No
+		 ( -25050	%  Salvaguarda=Reemplazar  FalloReemplazar=No  FalloReparar=Si
+		   -25050 ))	%  Salvaguarda=Reemplazar  FalloReemplazar=No  FalloReparar=No
+		(( -10700	%  Salvaguarda=Reparar  FalloReemplazar=Si  FalloReparar=Si
+		   -10700 )	%  Salvaguarda=Reparar  FalloReemplazar=Si  FalloReparar=No
+		 ( -650	%  Salvaguarda=Reparar  FalloReemplazar=No  FalloReparar=Si
+		   -650 ))	%  Salvaguarda=Reparar  FalloReemplazar=No  FalloReparar=No
+		(( -20000	%  Salvaguarda=Mantenimiento  FalloReemplazar=Si  FalloReparar=Si
+		   -20000 )	%  Salvaguarda=Mantenimiento  FalloReemplazar=Si  FalloReparar=No
+		 ( -20000	%  Salvaguarda=Mantenimiento  FalloReemplazar=No  FalloReparar=Si
+		   -20000 )));	%  Salvaguarda=Mantenimiento  FalloReemplazar=No  FalloReparar=No
     }
 
     potential (FalloReparar | Salvaguarda)
