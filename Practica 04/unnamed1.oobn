@@ -90,7 +90,8 @@ class unnamed1
     {
 	label = "";
 	position = (625 127);
-	states = ("A" "B");
+	states = ("A" "AB" "B");
+	HR_State_2 = "";
 	HR_LinkGroup = "[FalloDosDiscos:0][Utilidad:0]";
 	HR_LinkMode = "[FalloDosDiscos:0][Utilidad:0]";
 	HR_Group = "0";
@@ -135,9 +136,17 @@ class unnamed1
 		     0 )	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
 		   ( 0	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
 		     0 )))	%  Salvaguarda=Un disco  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
-		 ((( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		 ((( 0	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
+		  (( 0	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 )))	%  Salvaguarda=Un disco  DosDiscos=AB  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
+		 ((( 1	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
 		     0 )	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
-		   ( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		   ( 1	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
 		     0 ))	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
 		  (( 0	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
 		     0 )	%  Salvaguarda=Un disco  DosDiscos=B  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
@@ -151,6 +160,14 @@ class unnamed1
 		     0 )	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
 		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
 		     0 )))	%  Salvaguarda=Dos discos  DosDiscos=A  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
+		 ((( 0	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 ))	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=No
+		  (( 0	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=Si
+		     0 )	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=B  FalloDosDiscos=Si  FalloUnDisco=No
+		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=Si
+		     0 )))	%  Salvaguarda=Dos discos  DosDiscos=AB  UnDisco=B  FalloDosDiscos=No  FalloUnDisco=No
 		 ((( 0	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=Si
 		     0 )	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=Si  FalloUnDisco=No
 		   ( 0	%  Salvaguarda=Dos discos  DosDiscos=B  UnDisco=A  FalloDosDiscos=No  FalloUnDisco=Si
@@ -164,7 +181,8 @@ class unnamed1
     potential (FalloDosDiscos | DosDiscos)
     {
 	data = (( 0.86 0.14 )	%  DosDiscos=A
-		( 0.63 0.37 ));	%  DosDiscos=B
+		( 0.63 0.37 )	%  DosDiscos=AB
+		( 0.86 0.14 ));	%  DosDiscos=B
     }
 
     potential (FalloUnDisco | UnDisco)
@@ -175,8 +193,8 @@ class unnamed1
 
     potential (DosDiscos | Salvaguarda)
     {
-	data = (( 1 1 )	%  Salvaguarda=Un disco
-		( 1 1 ));	%  Salvaguarda=Dos discos
+	data = (( 1 1 1 )	%  Salvaguarda=Un disco
+		( 1 1 1 ));	%  Salvaguarda=Dos discos
     }
 
     potential (UnDisco | Salvaguarda)

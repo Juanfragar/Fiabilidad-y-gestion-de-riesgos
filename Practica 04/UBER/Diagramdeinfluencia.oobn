@@ -50,24 +50,10 @@ class Diagramdeinfluencia
     HR_Grid_Y = "40";
     HR_Grid_X = "40";
 
-    utility NoFallaReemplazar
+    utility Utilidad
     {
 	label = "";
-	position = (923 298);
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
-	HR_Desc = "";
-	HR_NodeSize = "(172, 77)";
-	HR_Group = "0";
-    }
-
-    utility SiFallaReemplazar
-    {
-	label = "";
-	position = (901 135);
-	HR_LinkMode = "";
-	HR_LinkGroup = "";
-	HR_NodeSize = "(172, 77)";
+	position = (361 266);
 	HR_Group = "0";
 	HR_Desc = "";
     }
@@ -75,10 +61,10 @@ class Diagramdeinfluencia
     node FalloReparar
     {
 	label = "";
-	position = (507 450);
-	states = ("0.18" "0.82");
-	HR_LinkGroup = "";
-	HR_LinkMode = "";
+	position = (220 149);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Utilidad:0]";
+	HR_LinkMode = "[Utilidad:0]";
 	HR_State_0 = "";
 	HR_State_1 = "";
 	HR_Desc = "";
@@ -89,10 +75,10 @@ class Diagramdeinfluencia
     node FalloReemplazar
     {
 	label = "";
-	position = (583 58);
-	states = ("0.18" "0.82");
-	HR_LinkMode = "[SiFallaReemplazar:0][NoFallaReemplazar:0]";
-	HR_LinkGroup = "[SiFallaReemplazar:0][NoFallaReemplazar:0]";
+	position = (552 176);
+	states = ("Si" "No");
+	HR_LinkMode = "[Utilidad:0]";
+	HR_LinkGroup = "[Utilidad:0]";
 	HR_NodeSize = "(185, 71)";
 	HR_Group = "0";
 	HR_Desc = "";
@@ -103,10 +89,10 @@ class Diagramdeinfluencia
     decision Salvaguarda
     {
 	label = "";
-	position = (233 175);
+	position = (382 81);
 	states = ("Reemplazar" "Reparar" "Mantenimiento");
-	HR_LinkGroup = "[FalloReemplazar:0][FalloReparar:0][SiFallaReemplazar:0][NoFallaReemplazar:0]";
-	HR_LinkMode = "[FalloReemplazar:0][FalloReparar:0][SiFallaReemplazar:0][NoFallaReemplazar:0]";
+	HR_LinkGroup = "[FalloReemplazar:0][FalloReparar:0][Utilidad:0]";
+	HR_LinkMode = "[FalloReemplazar:0][FalloReparar:0][Utilidad:0]";
 	HR_Group = "0";
 	HR_Desc = "";
 	HR_State_2 = "";
@@ -114,38 +100,34 @@ class Diagramdeinfluencia
 	HR_State_0 = "";
     }
 
-    potential (NoFallaReemplazar | Salvaguarda FalloReemplazar)
+    potential (Utilidad | Salvaguarda FalloReemplazar FalloReparar)
     {
-	data = (( 0	%  Salvaguarda=Reemplazar  FalloReemplazar=0.18
-		  0 )	%  Salvaguarda=Reemplazar  FalloReemplazar=0.82
-		( 0	%  Salvaguarda=Reparar  FalloReemplazar=0.18
-		  0 )	%  Salvaguarda=Reparar  FalloReemplazar=0.82
-		( 0	%  Salvaguarda=Mantenimiento  FalloReemplazar=0.18
-		  0 ));	%  Salvaguarda=Mantenimiento  FalloReemplazar=0.82
-    }
-
-    potential (SiFallaReemplazar | Salvaguarda FalloReemplazar)
-    {
-	data = (( 0	%  Salvaguarda=Reemplazar  FalloReemplazar=0.18
-		  0 )	%  Salvaguarda=Reemplazar  FalloReemplazar=0.82
-		( 0	%  Salvaguarda=Reparar  FalloReemplazar=0.18
-		  0 )	%  Salvaguarda=Reparar  FalloReemplazar=0.82
-		( 0	%  Salvaguarda=Mantenimiento  FalloReemplazar=0.18
-		  0 ));	%  Salvaguarda=Mantenimiento  FalloReemplazar=0.82
+	data = ((( 0	%  Salvaguarda=Reemplazar  FalloReemplazar=Si  FalloReparar=Si
+		   0 )	%  Salvaguarda=Reemplazar  FalloReemplazar=Si  FalloReparar=No
+		 ( 0	%  Salvaguarda=Reemplazar  FalloReemplazar=No  FalloReparar=Si
+		   0 ))	%  Salvaguarda=Reemplazar  FalloReemplazar=No  FalloReparar=No
+		(( 0	%  Salvaguarda=Reparar  FalloReemplazar=Si  FalloReparar=Si
+		   0 )	%  Salvaguarda=Reparar  FalloReemplazar=Si  FalloReparar=No
+		 ( 0	%  Salvaguarda=Reparar  FalloReemplazar=No  FalloReparar=Si
+		   0 ))	%  Salvaguarda=Reparar  FalloReemplazar=No  FalloReparar=No
+		(( 0	%  Salvaguarda=Mantenimiento  FalloReemplazar=Si  FalloReparar=Si
+		   0 )	%  Salvaguarda=Mantenimiento  FalloReemplazar=Si  FalloReparar=No
+		 ( 0	%  Salvaguarda=Mantenimiento  FalloReemplazar=No  FalloReparar=Si
+		   0 )));	%  Salvaguarda=Mantenimiento  FalloReemplazar=No  FalloReparar=No
     }
 
     potential (FalloReparar | Salvaguarda)
     {
-	data = (( 1 1 )	%  Salvaguarda=Reemplazar
-		( 1 1 )	%  Salvaguarda=Reparar
-		( 1 1 ));	%  Salvaguarda=Mantenimiento
+	data = (( 0 0 )	%  Salvaguarda=Reemplazar
+		( 0.18 0.82 )	%  Salvaguarda=Reparar
+		( 0 0 ));	%  Salvaguarda=Mantenimiento
     }
 
     potential (FalloReemplazar | Salvaguarda)
     {
-	data = (( 1 1 )	%  Salvaguarda=Reemplazar
-		( 1 1 )	%  Salvaguarda=Reparar
-		( 1 1 ));	%  Salvaguarda=Mantenimiento
+	data = (( 0.16 0.82 )	%  Salvaguarda=Reemplazar
+		( 0 0 )	%  Salvaguarda=Reparar
+		( 0 0 ));	%  Salvaguarda=Mantenimiento
     }
 
     potential (Salvaguarda)
